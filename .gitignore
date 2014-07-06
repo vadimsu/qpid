@@ -1,0 +1,13 @@
+*.o
+*.ko
+*.a
+*.so
+*.*~
+*.d
+*_post*
+a.out
+*.cmd
+*.tmp
+x86_64-default-linuxapp-gcc/*
+*/build/*
+

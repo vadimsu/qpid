@@ -1,0 +1,935 @@
+Start testing: Jul 06 15:44 IDT
+----------------------------------------------------------
+1/7 Testing: python-test
+1/7 Test: python-test
+Command: "/usr/bin/python" "/home/vadim/projects/qpid-proton-0.7/proton-c/env.py" "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python:/home/vadim/projects/qpid-proton-0.7/build/proton-c:/home/vadim/projects/qpid-proton-0.7/build/tests/tools/apps/c:/home/vadim/projects/qpid-proton-0.7/tests/tools/apps/python" "PYTHONPATH=/home/vadim/projects/qpid-proton-0.7/tests/python:/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/python:/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python:/home/vadim/projects/qpid-proton-0.7/build/proton-c" "/usr/bin/python" "/home/vadim/projects/qpid-proton-0.7/tests/python/proton-test"
+Directory: /home/vadim/projects/qpid-proton-0.7/build/proton-c
+"python-test" start time: Jul 06 15:44 IDT
+Output:
+----------------------------------------------------------
+proton_tests.codec.DataTest.testBinary .................................. pass
+proton_tests.codec.DataTest.testChar .................................... pass
+proton_tests.codec.DataTest.testCopy .................................... pass
+proton_tests.codec.DataTest.testCopyNested .............................. pass
+proton_tests.codec.DataTest.testCopyNestedArray ......................... pass
+proton_tests.codec.DataTest.testDecimal128 .............................. pass
+proton_tests.codec.DataTest.testDecimal32 ............................... pass
+proton_tests.codec.DataTest.testDecimal64 ............................... pass
+proton_tests.codec.DataTest.testDescribedEmptyArray ..................... pass
+proton_tests.codec.DataTest.testDescribedStringArray .................... pass
+proton_tests.codec.DataTest.testDouble .................................. pass
+proton_tests.codec.DataTest.testEmptyArray .............................. pass
+proton_tests.codec.DataTest.testEnterExit ............................... pass
+proton_tests.codec.DataTest.testFloat ................................... pass
+proton_tests.codec.DataTest.testInt ..................................... pass
+proton_tests.codec.DataTest.testIntArray ................................ pass
+proton_tests.codec.DataTest.testLookup .................................. pass
+proton_tests.codec.DataTest.testNestedNext .............................. pass
+proton_tests.codec.DataTest.testRoundTrip ............................... pass
+proton_tests.codec.DataTest.testString .................................. pass
+proton_tests.codec.DataTest.testStringArray ............................. pass
+proton_tests.codec.DataTest.testSymbol .................................. pass
+proton_tests.codec.DataTest.testTimestamp ............................... pass
+proton_tests.codec.DataTest.testTopLevelNext ............................ pass
+proton_tests.codec.DataTest.testUUID .................................... pass
+proton_tests.codec.DataTest.testUUIDArray ............................... pass
+proton_tests.engine.ConnectionTest.test_capabilities .................... pass
+proton_tests.engine.ConnectionTest.test_channel_max ..................... pass
+proton_tests.engine.ConnectionTest.test_cleanup ......................... pass
+proton_tests.engine.ConnectionTest.test_condition ....................... pass
+proton_tests.engine.ConnectionTest.test_open_close ...................... pass
+proton_tests.engine.ConnectionTest.test_properties ...................... pass
+proton_tests.engine.ConnectionTest.test_simultaneous_open_close ......... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseConnectionConnection . pass
+proton_tests.engine.CreditTest.testBufferingOnCloseConnectionLink ....... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseConnectionSession .... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseLinkConnection ....... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseLinkLink ............. pass
+proton_tests.engine.CreditTest.testBufferingOnCloseLinkSession .......... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseSessionConnection .... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseSessionLink .......... pass
+proton_tests.engine.CreditTest.testBufferingOnCloseSessionSession ....... pass
+proton_tests.engine.CreditTest.testCreditReceiver ....................... pass
+proton_tests.engine.CreditTest.testCreditSender ......................... pass
+proton_tests.engine.CreditTest.testDrainFlow ............................ pass
+proton_tests.engine.CreditTest.testDrainOrder ........................... pass
+proton_tests.engine.CreditTest.testDrainZero ............................ pass
+proton_tests.engine.CreditTest.testFullDrain ............................ pass
+proton_tests.engine.CreditTest.testHeadOfLineBlocking ................... pass
+proton_tests.engine.CreditTest.testNegative ............................. pass
+proton_tests.engine.CreditTest.testPartialDrain ......................... pass
+proton_tests.engine.CreditTest.testPushback ............................. pass
+proton_tests.engine.DeliveryTest.testCustom ............................. pass
+proton_tests.engine.DeliveryTest.testDisposition ........................ pass
+proton_tests.engine.DeliveryTest.testModified ........................... pass
+proton_tests.engine.DeliveryTest.testReceived ........................... pass
+proton_tests.engine.DeliveryTest.testRejected ........................... pass
+proton_tests.engine.DeliveryTest.testReleased ........................... pass
+proton_tests.engine.EventTest.testDeliveryEvents ........................ pass
+proton_tests.engine.EventTest.testDeliveryEventsDisp .................... pass
+proton_tests.engine.EventTest.testEndpointEvents ........................ pass
+proton_tests.engine.EventTest.testFlowEvents ............................ pass
+proton_tests.engine.IdleTimeoutTest.testGetSet .......................... pass
+[0x1aa8900]:ERROR amqp:resource-limit-exceeded local-idle-timeout expired
+proton_tests.engine.IdleTimeoutTest.testTimeout ......................... pass
+proton_tests.engine.LinkTest.test_cleanup ............................... pass
+proton_tests.engine.LinkTest.test_closing_connection .................... pass
+proton_tests.engine.LinkTest.test_closing_session ....................... pass
+proton_tests.engine.LinkTest.test_condition ............................. pass
+proton_tests.engine.LinkTest.test_distribution_mode ..................... pass
+proton_tests.engine.LinkTest.test_dynamic_link .......................... pass
+proton_tests.engine.LinkTest.test_multiple .............................. pass
+proton_tests.engine.LinkTest.test_open_close ............................ pass
+proton_tests.engine.LinkTest.test_settle_mode ........................... pass
+proton_tests.engine.LinkTest.test_simultaneous_open_close ............... pass
+proton_tests.engine.LinkTest.test_source ................................ pass
+proton_tests.engine.LinkTest.test_source_target ......................... pass
+proton_tests.engine.LinkTest.test_source_target_full .................... pass
+proton_tests.engine.LinkTest.test_target ................................ pass
+proton_tests.engine.MaxFrameTransferTest.testBigMessage ................. pass
+proton_tests.engine.MaxFrameTransferTest.testMinFrame ................... pass
+proton_tests.engine.MaxFrameTransferTest.testOddFrame ................... pass
+proton_tests.engine.PipelineTest.test ................................... pass
+[0x7f510c001ad0]:ERROR amqp:resource-limit-exceeded local-idle-timeout expired
+[0x7f510c001ad0]:ERROR amqp:resource-limit-exceeded local-idle-timeout expired
+[0x7f510c001ad0]:ERROR amqp:resource-limit-exceeded local-idle-timeout expired
+proton_tests.engine.ServerTest.testIdleTimeout .......................... pass
+proton_tests.engine.ServerTest.testKeepalive ............................ pass
+proton_tests.engine.SessionCreditTest.testBuffering ..................... pass
+proton_tests.engine.SessionCreditTest.testBufferingSize1023 ............. pass
+proton_tests.engine.SessionCreditTest.testBufferingSize1025 ............. pass
+proton_tests.engine.SessionCreditTest.testBufferingSize1059 ............. pass
+proton_tests.engine.SessionCreditTest.testBufferingSize16 ............... pass
+proton_tests.engine.SessionCreditTest.testBufferingSize2048 ............. pass
+proton_tests.engine.SessionCreditTest.testBufferingSize256 .............. pass
+proton_tests.engine.SessionCreditTest.testBufferingSize512 .............. pass
+proton_tests.engine.SessionCreditTest.testBufferingSize989 .............. pass
+proton_tests.engine.SessionCreditTest.testCreditWithBuffering ........... pass
+proton_tests.engine.SessionTest.test_cleanup ............................ pass
+proton_tests.engine.SessionTest.test_closing_connection ................. pass
+proton_tests.engine.SessionTest.test_condition .......................... pass
+proton_tests.engine.SessionTest.test_open_close ......................... pass
+proton_tests.engine.SessionTest.test_simultaneous_close ................. pass
+proton_tests.engine.SettlementTest.testMultipleUnsettled ................ pass
+proton_tests.engine.SettlementTest.testMultipleUnsettled1K2K ............ pass
+proton_tests.engine.SettlementTest.testMultipleUnsettled2K1K ............ pass
+proton_tests.engine.SettlementTest.testMultipleUnsettled2K2K ............ pass
+proton_tests.engine.SettlementTest.testMultipleUnsettled4K1K ............ pass
+proton_tests.engine.SettlementTest.testMultipleUnsettled4K2K ............ pass
+proton_tests.engine.SettlementTest.testSettleCurrent .................... pass
+proton_tests.engine.SettlementTest.testUnsettled ........................ pass
+proton_tests.engine.TransferTest.test_cleanup ........................... pass
+proton_tests.engine.TransferTest.test_delivery_id_ordering .............. pass
+proton_tests.engine.TransferTest.test_disposition ....................... pass
+proton_tests.engine.TransferTest.test_multiframe ........................ pass
+proton_tests.engine.TransferTest.test_work_queue ........................ pass
+proton_tests.interop.InteropTest.test_arrays ............................ pass
+proton_tests.interop.InteropTest.test_described ......................... pass
+proton_tests.interop.InteropTest.test_described_array ................... pass
+proton_tests.interop.InteropTest.test_lists ............................. pass
+proton_tests.interop.InteropTest.test_maps .............................. pass
+proton_tests.interop.InteropTest.test_message ........................... pass
+proton_tests.interop.InteropTest.test_primitives ........................ pass
+proton_tests.interop.InteropTest.test_strings ........................... pass
+proton_tests.message.AccessorsTest.testAddress .......................... pass
+proton_tests.message.AccessorsTest.testContentEncoding .................. pass
+proton_tests.message.AccessorsTest.testContentType ...................... pass
+proton_tests.message.AccessorsTest.testCorrelationId .................... pass
+proton_tests.message.AccessorsTest.testCreationTime ..................... pass
+proton_tests.message.AccessorsTest.testDeliveryCount .................... pass
+proton_tests.message.AccessorsTest.testDurable .......................... pass
+proton_tests.message.AccessorsTest.testExpiryTime ....................... pass
+proton_tests.message.AccessorsTest.testFirstAquirer ..................... pass
+proton_tests.message.AccessorsTest.testGroupId .......................... pass
+proton_tests.message.AccessorsTest.testGroupSequence .................... pass
+proton_tests.message.AccessorsTest.testId ............................... pass
+proton_tests.message.AccessorsTest.testPriority ......................... pass
+proton_tests.message.AccessorsTest.testReplyTo .......................... pass
+proton_tests.message.AccessorsTest.testReplyToGroupId ................... pass
+proton_tests.message.AccessorsTest.testSubject .......................... pass
+proton_tests.message.AccessorsTest.testTtl .............................. pass
+proton_tests.message.AccessorsTest.testUserId ........................... pass
+proton_tests.message.CodecTest.testRoundTrip ............................ pass
+proton_tests.message.LoadSaveTest.testBinary ............................ pass
+proton_tests.message.LoadSaveTest.testData .............................. pass
+proton_tests.message.LoadSaveTest.testDescriptor ........................ pass
+proton_tests.message.LoadSaveTest.testFloating .......................... pass
+proton_tests.message.LoadSaveTest.testIntegral .......................... pass
+proton_tests.message.LoadSaveTest.testList .............................. pass
+proton_tests.message.LoadSaveTest.testMap ............................... pass
+proton_tests.message.LoadSaveTest.testString ............................ pass
+proton_tests.message.LoadSaveTest.testSymbol ............................ pass
+proton_tests.message.LoadSaveTest.testText .............................. pass
+proton_tests.message.LoadSaveTest.testTextLoadNone ...................... pass
+proton_tests.messenger.MessengerTest.testBuffered ....................... pass
+proton_tests.messenger.MessengerTest.testCreditBlockingRebalance ........ pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteH ................ pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteHN ............... pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteHP ............... pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteHPN .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSH ............... pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSHN .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSHP .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSHPN ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUH .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUHN ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUHP ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUHPN ............ pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUPH ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUPHN ............ pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUPHP ............ pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteSUPHPN ........... pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUH ............... pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUHN .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUHP .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUHPN ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUPH .............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUPHN ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUPHP ............. pass
+proton_tests.messenger.MessengerTest.testDefaultRewriteUPHPN ............ pass
+proton_tests.messenger.MessengerTest.testDefaultRoute ................... pass
+proton_tests.messenger.MessengerTest.testDefaultRouteSubstitution ....... pass
+proton_tests.messenger.MessengerTest. \
+    testIncomingQueueBiggerThanSessionWindow ............................ pass
+proton_tests.messenger.MessengerTest.testIncomingQueueBiggerThanWindow .. pass
+proton_tests.messenger.MessengerTest.testIncomingRoute .................. pass
+proton_tests.messenger.MessengerTest.testIncomingWindow ................. pass
+proton_tests.messenger.MessengerTest.testOutgoingWindow ................. pass
+proton_tests.messenger.MessengerTest.testReject ......................... pass
+proton_tests.messenger.MessengerTest.testRejectIndividual ............... pass
+proton_tests.messenger.MessengerTest.testRewrite ........................ pass
+proton_tests.messenger.MessengerTest.testRewriteOverrideDefault ......... pass
+proton_tests.messenger.MessengerTest.testRewritePattern ................. pass
+proton_tests.messenger.MessengerTest.testRewriteSupress ................. pass
+proton_tests.messenger.MessengerTest.testRewriteToAt .................... pass
+proton_tests.messenger.MessengerTest.testRoute .......................... pass
+proton_tests.messenger.MessengerTest.testSendReceive .................... pass
+proton_tests.messenger.MessengerTest.testSendReceive100K ................ pass
+proton_tests.messenger.MessengerTest.testSendReceive10K ................. pass
+proton_tests.messenger.MessengerTest.testSendReceive1K .................. pass
+proton_tests.messenger.MessengerTest.testSendReceive1M .................. pass
+proton_tests.messenger.MessengerTest.testSendReceive2K .................. pass
+proton_tests.messenger.MessengerTest.testSendReceive4K .................. pass
+proton_tests.messenger.MessengerTest.testUnlimitedCredit ................ pass
+proton_tests.messenger.MessengerTest.test_proton222 ..................... pass
+proton_tests.messenger.NBMessengerTest.testCreditAutoBackpressure ....... pass
+proton_tests.messenger.NBMessengerTest.testCreditReclaim ................ pass
+proton_tests.messenger.NBMessengerTest.testCreditRedistribution ......... pass
+proton_tests.messenger.NBMessengerTest.testCreditReplenish .............. pass
+proton_tests.messenger.NBMessengerTest.testPushback ..................... pass
+proton_tests.messenger.NBMessengerTest.testRecvBeforeSubscribe .......... pass
+proton_tests.messenger.NBMessengerTest.testSmoke ........................ pass
+proton_tests.messenger.NBMessengerTest.testSmoke1024 .................... pass
+proton_tests.messenger.NBMessengerTest.testSmoke4096 .................... pass
+proton_tests.messenger.SelectableMessengerTest.testSelectable ........... pass
+proton_tests.messenger.SelectableMessengerTest.testSelectable1024 ....... pass
+proton_tests.messenger.SelectableMessengerTest.testSelectable16 ......... pass
+proton_tests.messenger.SelectableMessengerTest.testSelectable4096 ....... pass
+proton_tests.sasl.SaslTest.testChallengeResponse ........................ pass
+proton_tests.sasl.SaslTest.testFracturedSASL ............................ pass
+proton_tests.sasl.SaslTest.testInitialResponse .......................... pass
+proton_tests.sasl.SaslTest.testPipelined ................................ pass
+proton_tests.sasl.SaslTest.testPipelined2 ............................... pass
+proton_tests.sasl.SaslTest.testSaslAndAmqpInSingleChunk ................. pass
+proton_tests.sasl.SaslTest.test_singleton ............................... pass
+proton_tests.soak.MessengerTests.test_echo_C ............................ pass
+proton_tests.soak.MessengerTests.test_echo_C_Python ..................... pass
+proton_tests.soak.MessengerTests.test_echo_C_SSL ........................ pass
+proton_tests.soak.MessengerTests.test_echo_Python ....................... pass
+proton_tests.soak.MessengerTests.test_echo_Python_C ..................... pass
+proton_tests.soak.MessengerTests.test_echo_valgrind ..................... skip
+  Skipped: Skipping test - $VALGRIND not set.
+proton_tests.soak.MessengerTests.test_oneway_C .......................... pass
+proton_tests.soak.MessengerTests.test_oneway_C_Python ................... pass
+proton_tests.soak.MessengerTests.test_oneway_C_SSL ...................... pass
+proton_tests.soak.MessengerTests.test_oneway_Python ..................... pass
+proton_tests.soak.MessengerTests.test_oneway_Python_C ................... pass
+proton_tests.soak.MessengerTests.test_oneway_valgrind ................... skip
+  Skipped: Skipping test - $VALGRIND not set.
+proton_tests.soak.MessengerTests.test_relay_C ........................... pass
+proton_tests.soak.MessengerTests.test_relay_C_Python .................... pass
+proton_tests.soak.MessengerTests.test_relay_C_SSL ....................... pass
+proton_tests.soak.MessengerTests.test_relay_Python ...................... pass
+proton_tests.soak.MessengerTests.test_relay_valgrind .................... skip
+  Skipped: Skipping test - $VALGRIND not set.
+proton_tests.soak.MessengerTests.test_star_topology_C ................... pass
+proton_tests.soak.MessengerTests.test_star_topology_C_Python ............ pass
+proton_tests.soak.MessengerTests.test_star_topology_C_SSL ............... pass
+proton_tests.soak.MessengerTests.test_star_topology_Python .............. pass
+proton_tests.soak.MessengerTests.test_star_topology_Python_C ............ pass
+proton_tests.soak.MessengerTests.test_star_topology_valgrind ............ skip
+  Skipped: Skipping test - $VALGRIND not set.
+proton_tests.ssl.MessengerSSLTests.test_client_credentials .............. pass
+SSL_CTX_use_certificate_chain_file( /home/vadim/projects/qpid-proton-0.7/tests/python/proton_tests/ssl_db/bad ) failed
+error:02001002:system library:fopen:No such file or directory
+error:20074002:BIO routines:FILE_CTRL:system lib
+error:140DC002:SSL routines:SSL_CTX_use_certificate_chain_file:system lib
+CONNECTION ERROR invalid credentials
+[0x6cf2b70]:ERROR[-2] SSL Failure: error:140780E5:SSL routines:SSL23_READ:ssl handshake failure
+
+CONNECTION ERROR connection aborted (remote)
+proton_tests.ssl.MessengerSSLTests.test_client_credentials_bad_cert ..... pass
+SSL_CTX_use_PrivateKey_file( /home/vadim/projects/qpid-proton-0.7/tests/python/proton_tests/ssl_db/client-private-key.pem ) failed
+error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt
+error:0906A065:PEM routines:PEM_do_header:bad decrypt
+error:140B0009:SSL routines:SSL_CTX_use_PrivateKey_file:PEM lib
+CONNECTION ERROR invalid credentials
+[0x6cf2b70]:ERROR[-2] SSL Failure: error:140780E5:SSL routines:SSL23_READ:ssl handshake failure
+
+CONNECTION ERROR connection aborted (remote)
+proton_tests.ssl.MessengerSSLTests.test_client_credentials_bad_password . pass
+stat(/home/vadim/projects/qpid-proton-0.7/tests/python/proton_tests/ssl_db/bad) failed: No such file or directory
+CONNECTION ERROR invalid certificate db
+[0xb3ff9a0]:ERROR[-2] SSL Failure: error:140780E5:SSL routines:SSL23_READ:ssl handshake failure
+
+CONNECTION ERROR connection aborted (remote)
+proton_tests.ssl.MessengerSSLTests.test_client_credentials_bad_trusted .. pass
+[0xb3ffa30]:ERROR[-2] SSL Failure: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+
+error:140940E5:SSL routines:SSL3_READ_BYTES:ssl handshake failure
+[0xb5caef0]:ERROR[-2] SSL Failure: error:14094418:SSL routines:SSL3_READ_BYTES:tlsv1 alert unknown ca
+
+proton_tests.ssl.MessengerSSLTests.test_client_credentials_untrusted .... pass
+proton_tests.ssl.MessengerSSLTests.test_server_credentials .............. pass
+SSL_CTX_use_certificate_chain_file( /home/vadim/projects/qpid-proton-0.7/tests/python/proton_tests/ssl_db/bad ) failed
+error:02001002:system library:fopen:No such file or directory
+error:20074002:BIO routines:FILE_CTRL:system lib
+error:140DC002:SSL routines:SSL_CTX_use_certificate_chain_file:system lib
+proton_tests.ssl.MessengerSSLTests.test_server_credentials_bad_cert ..... pass
+SSL_CTX_use_PrivateKey_file( /home/vadim/projects/qpid-proton-0.7/tests/python/proton_tests/ssl_db/bad ) failed
+error:02001002:system library:fopen:No such file or directory
+error:20074002:BIO routines:FILE_CTRL:system lib
+error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib
+proton_tests.ssl.MessengerSSLTests.test_server_credentials_bad_key ...... pass
+SSL_CTX_use_PrivateKey_file( /home/vadim/projects/qpid-proton-0.7/tests/python/proton_tests/ssl_db/server-private-key.pem ) failed
+error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt
+error:0906A065:PEM routines:PEM_do_header:bad decrypt
+error:140B0009:SSL routines:SSL_CTX_use_PrivateKey_file:PEM lib
+proton_tests.ssl.MessengerSSLTests.test_server_credentials_bad_password . pass
+proton_tests.ssl.SslTest. \
+    test_allow_unsecured_client_which_connects_secured .................. pass
+proton_tests.ssl.SslTest. \
+    test_allow_unsecured_client_which_connects_unsecured ................ pass
+[0x49d7820]:ERROR[-2] SSL Failure: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+
+proton_tests.ssl.SslTest.test_bad_server_certificate .................... pass
+proton_tests.ssl.SslTest.test_client_authentication ..................... pass
+[0x2eb3150]:ERROR[-2] SSL Failure: error:140890B2:SSL routines:SSL3_GET_CLIENT_CERTIFICATE:no certificate returned
+
+proton_tests.ssl.SslTest.test_client_authentication_fail_bad_cert ....... pass
+[0x2fe9200]:ERROR[-2] SSL Failure: error:140890C7:SSL routines:SSL3_GET_CLIENT_CERTIFICATE:peer did not return a certificate
+
+proton_tests.ssl.SslTest.test_client_authentication_fail_no_cert ........ pass
+proton_tests.ssl.SslTest.test_client_server_authentication .............. pass
+proton_tests.ssl.SslTest.test_defaults .................................. pass
+proton_tests.ssl.SslTest.test_defaults_messenger_app .................... pass
+[0x6250e70]:ERROR[-2] SSL Failure: error:140760FC:SSL routines:SSL23_GET_CLIENT_HELLO:unknown protocol
+
+proton_tests.ssl.SslTest.test_disallow_unsecured_client ................. pass
+proton_tests.ssl.SslTest.test_multiple_sessions ......................... pass
+proton_tests.ssl.SslTest.test_server_authentication ..................... pass
+proton_tests.ssl.SslTest.test_server_authentication_messenger_app ....... pass
+proton_tests.ssl.SslTest.test_server_certificate ........................ pass
+[0x477c3d0]:ERROR[-2] SSL Failure: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+
+[0x4a88a70]:ERROR[-2] SSL Failure: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+
+[0xb0f19f0]:ERROR[-2] SSL Failure: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
+
+proton_tests.ssl.SslTest.test_server_hostname_authentication ............ pass
+proton_tests.ssl.SslTest.test_server_only_authentication ................ pass
+proton_tests.ssl.SslTest.test_session_resume ............................ pass
+proton_tests.ssl.SslTest.test_singleton ................................. pass
+proton_tests.ssl.SslTest.test_ssl_with_small_buffer ..................... pass
+[0x70fa010]:ERROR[-2] AMQP header mismatch: 'GARBAGE_XXX'
+
+[0x70fa010]:ERROR[-2] AMQP header mismatch: '' (connection aborted)
+
+proton_tests.transport.TransportTest.testBigGarbage ..................... pass
+proton_tests.transport.TransportTest.testBindAfterOpen .................. pass
+proton_tests.transport.TransportTest.testCloseHead ...................... pass
+[0x63463c0]:ERROR[-2] AMQP header mismatch: '' (connection aborted)
+
+proton_tests.transport.TransportTest.testCloseTail ...................... pass
+[0x70fa010]:ERROR[-2] AMQP header mismatch: '' (connection aborted)
+
+proton_tests.transport.TransportTest.testEOS ............................ pass
+[0x61be430]:ERROR[-2] AMQP header mismatch: 'GARBAGE_'
+
+[0x61be430]:ERROR[-2] AMQP header mismatch: '' (connection aborted)
+
+proton_tests.transport.TransportTest.testGarbage ........................ pass
+[0x70fa010]:ERROR amqp:connection:framing-error connection aborted
+[0x70fa010]:ERROR[-2] connection aborted
+
+proton_tests.transport.TransportTest.testHeader ......................... pass
+proton_tests.transport.TransportTest.testOutput ......................... pass
+[0x70fa010]:ERROR[-2] AMQP header mismatch: '' (connection aborted)
+
+proton_tests.transport.TransportTest.testPartial ........................ pass
+[0x61be430]:ERROR[-2] AMQP header mismatch: 'XXX'
+
+[0x61be430]:ERROR[-2] AMQP header mismatch: '' (connection aborted)
+
+proton_tests.transport.TransportTest.testSmallGarbage ................... pass
+Totals: 281 tests, 277 passed, 4 skipped, 0 ignored, 0 failed
+<end of output>
+Test time =  41.13 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Totals: .* 0 failed
+]
+"python-test" end time: Jul 06 15:45 IDT
+"python-test" time elapsed: 00:00:41
+----------------------------------------------------------
+
+2/7 Testing: ruby-unit-test
+2/7 Test: ruby-unit-test
+Command: "/usr/bin/python" "/home/vadim/projects/qpid-proton-0.7/proton-c/env.py" "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby:/home/vadim/projects/qpid-proton-0.7/build/proton-c" "RUBYLIB=/home/vadim/projects/qpid-proton-0.7/tests/ruby:/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby:/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby:/home/vadim/projects/qpid-proton-0.7/build/proton-c:/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/lib" "/home/vadim/projects/qpid-proton-0.7/tests/ruby/proton-test"
+Directory: /home/vadim/projects/qpid-proton-0.7/build/proton-c
+"ruby-unit-test" start time: Jul 06 15:45 IDT
+Output:
+----------------------------------------------------------
+Loaded suite /home/vadim/projects/qpid-proton-0.7/tests/ruby/proton-test
+Started
+.........
+Finished in 0.040455 seconds.
+
+9 tests, 122 assertions, 0 failures, 0 errors
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"ruby-unit-test" end time: Jul 06 15:45 IDT
+"ruby-unit-test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: ruby-spec-test
+3/7 Test: ruby-spec-test
+Command: "/usr/bin/python" "/home/vadim/projects/qpid-proton-0.7/proton-c/env.py" "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby:/home/vadim/projects/qpid-proton-0.7/build/proton-c" "RUBYLIB=/home/vadim/projects/qpid-proton-0.7/tests/ruby:/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby:/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby:/home/vadim/projects/qpid-proton-0.7/build/proton-c:/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/lib" "/usr/local/bin/rspec"
+Directory: /home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby
+"ruby-spec-test" start time: Jul 06 15:45 IDT
+Output:
+----------------------------------------------------------
+/var/lib/gems/1.8/gems/simplecov-0.8.2/lib/simplecov/command_guesser.rb:30: warning: regexp has invalid interval
+/var/lib/gems/1.8/gems/simplecov-0.8.2/lib/simplecov/command_guesser.rb:30: warning: regexp has `}' without escape
+WARNING: SimpleCov is activated, but you're not running Ruby 1.9+ - no coverage analysis will happen
+Starting with SimpleCov 1.0.0, even no-op compatibility with Ruby <= 1.8 will be entirely dropped.
+simplecov available
+recv: Connection reset by peer
+[0x22c42e0]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x239a590]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x21cc620]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x2442650]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x2492580]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x24e4540]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x25368e0]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x2589770]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+recv: Connection reset by peer
+[0x25db760]:ERROR[-2] SASL header mismatch: ''
+
+CONNECTION ERROR connection aborted (remote)
+FFFFFF.FFFF.FFF.....................F......................................F*.............FFFF..FFF..............F..............................................F.........FFF.FFFFFF...FF.....FF...F.................*...***.*..*.....*..*****
+
+Pending:
+  A data object raises an error when setting the wrong type in an array
+    # Not yet implemented
+    # ./spec/qpid/proton/data_spec.rb:412
+  A messenger once started returns a tracker's status
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:233
+  A messenger once started and subscribed to an address can send with an empty queue
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:285
+  A messenger once started and subscribed to an address has an incoming tracker
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:328
+  A messenger once started and subscribed to an address can reject an incoming message
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:329
+  A messenger once started and subscribed to an address can accept a message
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:337
+  A messenger once started and subscribed to an address with a an outgoing tracker returns a tracker's status
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:298
+  A messenger once started and subscribed to an address with messages sent can send messages
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:351
+  A messenger once started and subscribed to an address with messages sent can receive messages
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:365
+  A messenger once started and subscribed to an address with messages sent and create a new message when one wasn't provided
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:366
+  A messenger once started and subscribed to an address with messages sent can get a message from the incoming queue
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:367
+  A messenger once started and subscribed to an address with messages sent can tell how many outgoing messages are pending
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:368
+  A messenger once started and subscribed to an address with messages sent can tell how many incoming messages are queued
+    # Not yet implemented
+    # ./spec/qpid/proton/messenger_spec.rb:369
+
+Failures:
+
+  1) The extended array type can be created like a normal array
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  2) The extended array type raises an error when putting into a nil Data object
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  3) The extended array type raises an error when getting from a nil Data object
+     Failure/Error: @undescribed = random_array(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:73:in `random_array'
+     # ./spec/spec_helper.rb:68:in `each'
+     # ./spec/spec_helper.rb:68:in `random_array'
+     # ./spec/qpid/proton/array_spec.rb:27
+
+  4) The extended array type raises an error when the data object is empty
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  5) The extended array type raises an error when the current object is not a list
+     Failure/Error: @undescribed = random_array(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:73:in `random_array'
+     # ./spec/spec_helper.rb:68:in `each'
+     # ./spec/spec_helper.rb:68:in `random_array'
+     # ./spec/qpid/proton/array_spec.rb:27
+
+
+Deprecation Warnings:
+
+Using `should` from rspec-expectations' old `:should` syntax without explicitly enabling the syntax is deprecated. Use the new `:expect` syntax or explicitly enable `:should` instead. Called from /home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/spec/qpid/proton/array_spec.rb:75.
+
+
+If you need more of the backtrace for any of these deprecations to
+identify where to make the necessary changes, you can configure
+`config.raise_errors_for_deprecations!`, and it will turn the
+deprecation warnings into errors, giving you the full backtrace.
+  6) The extended array type does not have an array header when it's a simple list
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  7) The extended array type has an array header when it's an AMQP array
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  8) The extended array type raises an error when the elements of an Array are dissimilar and is put into a Data object
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  9) The extended array type can be put into a Data object as an undescribed array
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  10) The extended array type can be put into a Data object as a described array
+     Failure/Error: @list        = random_list(rand(100))
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/qpid/proton/array_spec.rb:26
+
+  11) A data object can hold a null
+     Failure/Error: @data.null?.should be_true
+       expected true to respond to `true?`
+     # ./spec/qpid/proton/data_spec.rb:38
+
+  12) A data object can hold a true boolean
+     Failure/Error: @data.bool.should be_true
+       expected true to respond to `true?`
+     # ./spec/qpid/proton/data_spec.rb:43
+
+  13) A data object can hold a false boolean
+     Failure/Error: @data.bool.should_not be_true
+       expected false to respond to `true?`
+     # ./spec/qpid/proton/data_spec.rb:48
+
+  14) A data object can hold a character
+     Failure/Error: value = rand(256).chr.ord
+     NoMethodError:
+       undefined method `ord' for " ":String
+     # ./spec/qpid/proton/data_spec.rb:174
+
+  15) A data object can hold a described value
+     Failure/Error: @data.described?.should be_true
+       expected true to respond to `true?`
+     # ./spec/qpid/proton/data_spec.rb:404
+
+  16) The extended hash type raises an error when put into a nil Data instance
+     Failure/Error: @hash = random_hash(rand(128) + 64)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/hash_spec.rb:26
+
+  17) The extended hash type can be put into an instance of Data
+     Failure/Error: @hash = random_hash(rand(128) + 64)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/hash_spec.rb:26
+
+  18) The extended hash type raises an error when retrieved from a nil Data instance
+     Failure/Error: @hash = random_hash(rand(128) + 64)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/hash_spec.rb:26
+
+  19) The extended hash type raises an error when trying to get what is not a Hash
+     Failure/Error: @hash = random_hash(rand(128) + 64)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/hash_spec.rb:26
+
+  20) A message has an error number
+     Failure/Error: @message.error?.should_not be_true
+       expected false to respond to `true?`
+     # ./spec/qpid/proton/message_spec.rb:45
+
+  21) A message has an error message
+     Failure/Error: @message.error?.should_not be_true
+       expected false to respond to `true?`
+     # ./spec/qpid/proton/message_spec.rb:53
+
+  22) A message can be durable
+     Failure/Error: @message.durable.should be_true
+       expected true to respond to `true?`
+     # ./spec/qpid/proton/message_spec.rb:63
+
+  23) A message has a first acquirer
+     Failure/Error: @message.first_acquirer?.should be_true
+       expected true to respond to `true?`
+     # ./spec/qpid/proton/message_spec.rb:154
+
+  24) A message can replace the set of properties
+     Failure/Error: values = random_hash(128)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:425
+
+  25) A message can replace the instructions
+     Failure/Error: values = random_hash(rand(128) + 1)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:521
+
+  26) A message can delete the set of instructions
+     Failure/Error: values = random_hash(rand(128) + 1)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:533
+
+  27) A message has no instructions after being cleared
+     Failure/Error: @message.clear
+     NoMethodError:
+       undefined method `clear' for #<String:0x7fced283e2a0>
+     # ./lib/qpid_proton/message.rb:144:in `clear'
+     # ./spec/qpid/proton/message_spec.rb:549
+
+  28) A message can set an annotation
+     Failure/Error: name = random_hash(32)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:559
+
+  29) A message can update an annotation
+     Failure/Error: name = random_hash(32)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:567
+
+  30) A message can delete an annotation
+     Failure/Error: name = random_hash(32)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:580
+
+  31) A message can replace all annotations
+     Failure/Error: values = random_hash(rand(128) + 1)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:591
+
+  32) A message can delete the set of annotations
+     Failure/Error: values = random_hash(rand(128) + 1)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:603
+
+  33) A message has no annotations after being cleared
+     Failure/Error: @message.clear
+     NoMethodError:
+       undefined method `clear' for #<String:0x7fced280ce08>
+     # ./lib/qpid_proton/message.rb:145:in `clear'
+     # ./spec/qpid/proton/message_spec.rb:619
+
+  34) A message can set the body property
+     Failure/Error: value = random_hash(100)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:651
+     # ./spec/qpid/proton/message_spec.rb:644:in `each'
+     # ./spec/qpid/proton/message_spec.rb:644
+
+  35) A message can update the body property
+     Failure/Error: value = random_hash(100)
+     NoMethodError:
+       undefined method `uuid' for SecureRandom:Module
+     # ./spec/spec_helper.rb:53:in `random_list'
+     # ./spec/spec_helper.rb:44:in `each'
+     # ./spec/spec_helper.rb:44:in `random_list'
+     # ./spec/spec_helper.rb:93:in `random_hash'
+     # ./spec/qpid/proton/message_spec.rb:669
+     # ./spec/qpid/proton/message_spec.rb:662:in `each'
+     # ./spec/qpid/proton/message_spec.rb:662
+
+  36) A messenger has an error number
+     Failure/Error: @messenger.error?.should_not be_true
+       expected false to respond to `true?`
+     # ./spec/qpid/proton/messenger_spec.rb:69
+
+  37) A messenger has an error message
+     Failure/Error: @messenger.error?.should_not be_true
+       expected false to respond to `true?`
+     # ./spec/qpid/proton/messenger_spec.rb:80
+
+  38) A messenger raises an error when subscribing to an invalid address
+     Failure/Error: @messenger.error?.should be_true
+       expected true to respond to `true?`
+     # ./spec/qpid/proton/messenger_spec.rb:112
+
+1 deprecation warning total
+
+Finished in 0.5396 seconds (files took 0.23072 seconds to load)
+238 examples, 38 failures, 13 pending
+
+Failed examples:
+
+rspec ./spec/qpid/proton/array_spec.rb:32 # The extended array type can be created like a normal array
+rspec ./spec/qpid/proton/array_spec.rb:41 # The extended array type raises an error when putting into a nil Data object
+rspec ./spec/qpid/proton/array_spec.rb:47 # The extended array type raises an error when getting from a nil Data object
+rspec ./spec/qpid/proton/array_spec.rb:53 # The extended array type raises an error when the data object is empty
+rspec ./spec/qpid/proton/array_spec.rb:59 # The extended array type raises an error when the current object is not a list
+rspec ./spec/qpid/proton/array_spec.rb:68 # The extended array type does not have an array header when it's a simple list
+rspec ./spec/qpid/proton/array_spec.rb:79 # The extended array type has an array header when it's an AMQP array
+rspec ./spec/qpid/proton/array_spec.rb:84 # The extended array type raises an error when the elements of an Array are dissimilar and is put into a Data object
+rspec ./spec/qpid/proton/array_spec.rb:94 # The extended array type can be put into a Data object as an undescribed array
+rspec ./spec/qpid/proton/array_spec.rb:104 # The extended array type can be put into a Data object as a described array
+rspec ./spec/qpid/proton/data_spec.rb:36 # A data object can hold a null
+rspec ./spec/qpid/proton/data_spec.rb:41 # A data object can hold a true boolean
+rspec ./spec/qpid/proton/data_spec.rb:46 # A data object can hold a false boolean
+rspec ./spec/qpid/proton/data_spec.rb:173 # A data object can hold a character
+rspec ./spec/qpid/proton/data_spec.rb:395 # A data object can hold a described value
+rspec ./spec/qpid/proton/hash_spec.rb:29 # The extended hash type raises an error when put into a nil Data instance
+rspec ./spec/qpid/proton/hash_spec.rb:35 # The extended hash type can be put into an instance of Data
+rspec ./spec/qpid/proton/hash_spec.rb:41 # The extended hash type raises an error when retrieved from a nil Data instance
+rspec ./spec/qpid/proton/hash_spec.rb:47 # The extended hash type raises an error when trying to get what is not a Hash
+rspec ./spec/qpid/proton/message_spec.rb:44 # A message has an error number
+rspec ./spec/qpid/proton/message_spec.rb:52 # A message has an error message
+rspec ./spec/qpid/proton/message_spec.rb:61 # A message can be durable
+rspec ./spec/qpid/proton/message_spec.rb:152 # A message has a first acquirer
+rspec ./spec/qpid/proton/message_spec.rb:424 # A message can replace the set of properties
+rspec ./spec/qpid/proton/message_spec.rb:520 # A message can replace the instructions
+rspec ./spec/qpid/proton/message_spec.rb:532 # A message can delete the set of instructions
+rspec ./spec/qpid/proton/message_spec.rb:542 # A message has no instructions after being cleared
+rspec ./spec/qpid/proton/message_spec.rb:558 # A message can set an annotation
+rspec ./spec/qpid/proton/message_spec.rb:566 # A message can update an annotation
+rspec ./spec/qpid/proton/message_spec.rb:579 # A message can delete an annotation
+rspec ./spec/qpid/proton/message_spec.rb:590 # A message can replace all annotations
+rspec ./spec/qpid/proton/message_spec.rb:602 # A message can delete the set of annotations
+rspec ./spec/qpid/proton/message_spec.rb:612 # A message has no annotations after being cleared
+rspec ./spec/qpid/proton/message_spec.rb:643 # A message can set the body property
+rspec ./spec/qpid/proton/message_spec.rb:661 # A message can update the body property
+rspec ./spec/qpid/proton/messenger_spec.rb:68 # A messenger has an error number
+rspec ./spec/qpid/proton/messenger_spec.rb:79 # A messenger has an error message
+rspec ./spec/qpid/proton/messenger_spec.rb:108 # A messenger raises an error when subscribing to an invalid address
+<end of output>
+Test time =   0.89 sec
+----------------------------------------------------------
+Test Failed.
+"ruby-spec-test" end time: Jul 06 15:45 IDT
+"ruby-spec-test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: c-object-tests
+4/7 Test: c-object-tests
+Command: "/home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests/c-object-tests"
+Directory: /home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests
+"c-object-tests" start time: Jul 06 15:45 IDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"c-object-tests" end time: Jul 06 15:45 IDT
+"c-object-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: c-message-tests
+5/7 Test: c-message-tests
+Command: "/home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests/c-message-tests"
+Directory: /home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests
+"c-message-tests" start time: Jul 06 15:45 IDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"c-message-tests" end time: Jul 06 15:45 IDT
+"c-message-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: c-engine-tests
+6/7 Test: c-engine-tests
+Command: "/home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests/c-engine-tests"
+Directory: /home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests
+"c-engine-tests" start time: Jul 06 15:45 IDT
+Output:
+----------------------------------------------------------
+test_free_connection
+test_free_session
+test_free_link
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"c-engine-tests" end time: Jul 06 15:45 IDT
+"c-engine-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: c-parse-url-tests
+7/7 Test: c-parse-url-tests
+Command: "/home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests/c-parse-url-tests"
+Directory: /home/vadim/projects/qpid-proton-0.7/build/proton-c/src/tests
+"c-parse-url-tests" start time: Jul 06 15:45 IDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"c-parse-url-tests" end time: Jul 06 15:45 IDT
+"c-parse-url-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 06 15:45 IDT

@@ -1,0 +1,1 @@
+/usr/bin/gcc      CMakeFiles/msgr-send.dir/msgr-send.c.o CMakeFiles/msgr-send.dir/msgr-common.c.o  -o msgr-send -rdynamic ../../../../proton-c/libqpid-proton.so.2.0.0 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c 

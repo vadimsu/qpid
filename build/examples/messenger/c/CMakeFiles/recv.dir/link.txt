@@ -1,0 +1,1 @@
+/usr/bin/gcc      CMakeFiles/recv.dir/recv.c.o  -o recv -rdynamic ../../../proton-c/libqpid-proton.so.2.0.0 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c 
