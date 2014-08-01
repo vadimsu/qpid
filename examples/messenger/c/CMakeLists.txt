@@ -21,8 +21,14 @@ find_package(Proton REQUIRED)
 
 add_executable(recv recv.c)
 add_executable(send send.c)
+add_executable(my_recv my_recv.c)
+add_executable(my_send my_send.c)
+add_executable(my_recv_dpdk my_recv.c)
 
 include_directories(${Proton_INCLUDE_DIRS})
 
 target_link_libraries(recv ${Proton_LIBRARIES})
 target_link_libraries(send ${Proton_LIBRARIES})
+target_link_libraries(my_recv ${Proton_LIBRARIES})
+target_link_libraries(my_send ${Proton_LIBRARIES})
+target_link_libraries(my_recv_dpdk ${Proton_LIBRARIES})

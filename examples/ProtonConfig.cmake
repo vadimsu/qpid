@@ -19,5 +19,25 @@
 
 set (Proton_VERSION       ${PN_VERSION})
 set (Proton_INCLUDE_DIRS  ${CMAKE_SOURCE_DIR}/proton-c/include)
-set (Proton_LIBRARIES     qpid-proton)
+set (Proton_LIBRARIES     qpid-proton 
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_timer.a 
+                          ${CMAKE_SOURCE_DIR}/proton-c/libnetinet 
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_cmdline.a 
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_eal.a 
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_hash.a 
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_kni.a 
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_kvargs.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_lpm.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_malloc.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_mbuf.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_mempool.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_meter.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_pmd_e1000.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_pmd_ixgbe.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_pmd_ring.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_pmd_virtio_uio.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_pmd_vmxnet3_uio.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_power.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_ring.a
+                          ${CMAKE_SOURCE_DIR}/proton-c/librte_sched.a)
 set (Proton_FOUND True)

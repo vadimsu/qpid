@@ -78,6 +78,26 @@ recv_EXTERNAL_OBJECTS =
 
 examples/messenger/c/recv: examples/messenger/c/CMakeFiles/recv.dir/recv.c.o
 examples/messenger/c/recv: proton-c/libqpid-proton.so.2.0.0
+examples/messenger/c/recv: ../proton-c/librte_timer.a
+examples/messenger/c/recv: ../proton-c/libnetinet
+examples/messenger/c/recv: ../proton-c/librte_cmdline.a
+examples/messenger/c/recv: ../proton-c/librte_eal.a
+examples/messenger/c/recv: ../proton-c/librte_hash.a
+examples/messenger/c/recv: ../proton-c/librte_kni.a
+examples/messenger/c/recv: ../proton-c/librte_kvargs.a
+examples/messenger/c/recv: ../proton-c/librte_lpm.a
+examples/messenger/c/recv: ../proton-c/librte_malloc.a
+examples/messenger/c/recv: ../proton-c/librte_mbuf.a
+examples/messenger/c/recv: ../proton-c/librte_mempool.a
+examples/messenger/c/recv: ../proton-c/librte_meter.a
+examples/messenger/c/recv: ../proton-c/librte_pmd_e1000.a
+examples/messenger/c/recv: ../proton-c/librte_pmd_ixgbe.a
+examples/messenger/c/recv: ../proton-c/librte_pmd_ring.a
+examples/messenger/c/recv: ../proton-c/librte_pmd_virtio_uio.a
+examples/messenger/c/recv: ../proton-c/librte_pmd_vmxnet3_uio.a
+examples/messenger/c/recv: ../proton-c/librte_power.a
+examples/messenger/c/recv: ../proton-c/librte_ring.a
+examples/messenger/c/recv: ../proton-c/librte_sched.a
 examples/messenger/c/recv: /usr/lib/x86_64-linux-gnu/libssl.so
 examples/messenger/c/recv: /usr/lib/x86_64-linux-gnu/libcrypto.so
 examples/messenger/c/recv: examples/messenger/c/CMakeFiles/recv.dir/build.make

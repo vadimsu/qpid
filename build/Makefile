@@ -693,6 +693,19 @@ my_recv/fast:
 .PHONY : my_recv/fast
 
 #=============================================================================
+# Target rules for targets named my_recv_dpdk
+
+# Build rule for target.
+my_recv_dpdk: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_recv_dpdk
+.PHONY : my_recv_dpdk
+
+# fast build rule for target.
+my_recv_dpdk/fast:
+	$(MAKE) -f examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/build.make examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/build
+.PHONY : my_recv_dpdk/fast
+
+#=============================================================================
 # Target rules for targets named my_send
 
 # Build rule for target.
@@ -786,6 +799,7 @@ help:
 	@echo "... c-object-tests"
 	@echo "... c-parse-url-tests"
 	@echo "... my_recv"
+	@echo "... my_recv_dpdk"
 	@echo "... my_send"
 	@echo "... recv"
 	@echo "... send"

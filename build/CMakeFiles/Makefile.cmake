@@ -129,6 +129,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "proton-c/src/tests/CMakeFiles/c-object-tests.dir/DependInfo.cmake"
   "proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/DependInfo.cmake"
   "examples/messenger/c/CMakeFiles/my_recv.dir/DependInfo.cmake"
+  "examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/DependInfo.cmake"
   "examples/messenger/c/CMakeFiles/my_send.dir/DependInfo.cmake"
   "examples/messenger/c/CMakeFiles/recv.dir/DependInfo.cmake"
   "examples/messenger/c/CMakeFiles/send.dir/DependInfo.cmake"

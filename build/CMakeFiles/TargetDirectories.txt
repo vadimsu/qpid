@@ -36,6 +36,7 @@
 /home/vadim/projects/qpid-proton-0.7/build/tests/tools/apps/c/CMakeFiles/msgr-recv.dir
 /home/vadim/projects/qpid-proton-0.7/build/tests/tools/apps/c/CMakeFiles/msgr-send.dir
 /home/vadim/projects/qpid-proton-0.7/build/examples/messenger/c/CMakeFiles/my_recv.dir
+/home/vadim/projects/qpid-proton-0.7/build/examples/messenger/c/CMakeFiles/my_recv_dpdk.dir
 /home/vadim/projects/qpid-proton-0.7/build/examples/messenger/c/CMakeFiles/my_send.dir
 /home/vadim/projects/qpid-proton-0.7/build/proton-c/CMakeFiles/proton.dir
 /home/vadim/projects/qpid-proton-0.7/build/proton-c/CMakeFiles/proton-dump.dir
