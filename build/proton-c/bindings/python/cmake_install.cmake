@@ -53,7 +53,9 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Python")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python" TYPE FILE FILES
+  list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
+   "/usr/lib/python2.7/dist-packages/cproton.py;/usr/lib/python2.7/dist-packages/cproton.pyc;/usr/lib/python2.7/dist-packages/cproton.pyo;/usr/lib/python2.7/dist-packages/proton.py;/usr/lib/python2.7/dist-packages/proton.pyc;/usr/lib/python2.7/dist-packages/proton.pyo")
+FILE(INSTALL DESTINATION "/usr/lib/python2.7/dist-packages" TYPE FILE FILES
     "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python/cproton.py"
     "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python/cproton.pyc"
     "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python/cproton.pyo"
@@ -64,19 +66,21 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Python"
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Python")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Python")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so")
+  IF(EXISTS "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
     FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so"
+         FILE "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so"
          RPATH "")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python" TYPE MODULE FILES "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python/_cproton.so")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so")
+  list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
+   "/usr/lib/python2.7/dist-packages/_cproton.so")
+FILE(INSTALL DESTINATION "/usr/lib/python2.7/dist-packages" TYPE MODULE FILES "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python/_cproton.so")
+  IF(EXISTS "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
     FILE(RPATH_REMOVE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so")
+         FILE "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
     IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/python/_cproton.so")
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Python")

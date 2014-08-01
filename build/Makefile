@@ -680,6 +680,32 @@ c-parse-url-tests/fast:
 .PHONY : c-parse-url-tests/fast
 
 #=============================================================================
+# Target rules for targets named my_recv
+
+# Build rule for target.
+my_recv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_recv
+.PHONY : my_recv
+
+# fast build rule for target.
+my_recv/fast:
+	$(MAKE) -f examples/messenger/c/CMakeFiles/my_recv.dir/build.make examples/messenger/c/CMakeFiles/my_recv.dir/build
+.PHONY : my_recv/fast
+
+#=============================================================================
+# Target rules for targets named my_send
+
+# Build rule for target.
+my_send: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_send
+.PHONY : my_send
+
+# fast build rule for target.
+my_send/fast:
+	$(MAKE) -f examples/messenger/c/CMakeFiles/my_send.dir/build.make examples/messenger/c/CMakeFiles/my_send.dir/build
+.PHONY : my_send/fast
+
+#=============================================================================
 # Target rules for targets named recv
 
 # Build rule for target.
@@ -759,6 +785,8 @@ help:
 	@echo "... c-message-tests"
 	@echo "... c-object-tests"
 	@echo "... c-parse-url-tests"
+	@echo "... my_recv"
+	@echo "... my_send"
 	@echo "... recv"
 	@echo "... send"
 .PHONY : help

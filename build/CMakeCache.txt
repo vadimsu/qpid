@@ -380,7 +380,7 @@ SYSCONF_INSTALL_DIR:PATH=etc
 // will be queried for the appropriate directory and proton bindings
 // will be installed and available system wide with no additional
 // per user configuration.
-SYSINSTALL_BINDINGS:BOOL=OFF
+SYSINSTALL_BINDINGS:BOOL=ON
 
 //Install PERL bindings into interpreter specified location.
 SYSINSTALL_PERL:BOOL=OFF

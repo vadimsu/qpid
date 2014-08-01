@@ -147,6 +147,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+examples/messenger/c/CMakeFiles/my_recv.dir/rule:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/my_recv.dir/rule
+.PHONY : examples/messenger/c/CMakeFiles/my_recv.dir/rule
+
+# Convenience name for target.
+my_recv: examples/messenger/c/CMakeFiles/my_recv.dir/rule
+.PHONY : my_recv
+
+# fast build rule for target.
+my_recv/fast:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_recv.dir/build.make examples/messenger/c/CMakeFiles/my_recv.dir/build
+.PHONY : my_recv/fast
+
+# Convenience name for target.
+examples/messenger/c/CMakeFiles/my_send.dir/rule:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/my_send.dir/rule
+.PHONY : examples/messenger/c/CMakeFiles/my_send.dir/rule
+
+# Convenience name for target.
+my_send: examples/messenger/c/CMakeFiles/my_send.dir/rule
+.PHONY : my_send
+
+# fast build rule for target.
+my_send/fast:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_send.dir/build.make examples/messenger/c/CMakeFiles/my_send.dir/build
+.PHONY : my_send/fast
+
+# Convenience name for target.
 examples/messenger/c/CMakeFiles/recv.dir/rule:
 	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/recv.dir/rule
 .PHONY : examples/messenger/c/CMakeFiles/recv.dir/rule
@@ -173,6 +201,54 @@ send: examples/messenger/c/CMakeFiles/send.dir/rule
 send/fast:
 	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/send.dir/build.make examples/messenger/c/CMakeFiles/send.dir/build
 .PHONY : send/fast
+
+my_recv.o: my_recv.c.o
+.PHONY : my_recv.o
+
+# target to build an object file
+my_recv.c.o:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_recv.dir/build.make examples/messenger/c/CMakeFiles/my_recv.dir/my_recv.c.o
+.PHONY : my_recv.c.o
+
+my_recv.i: my_recv.c.i
+.PHONY : my_recv.i
+
+# target to preprocess a source file
+my_recv.c.i:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_recv.dir/build.make examples/messenger/c/CMakeFiles/my_recv.dir/my_recv.c.i
+.PHONY : my_recv.c.i
+
+my_recv.s: my_recv.c.s
+.PHONY : my_recv.s
+
+# target to generate assembly for a file
+my_recv.c.s:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_recv.dir/build.make examples/messenger/c/CMakeFiles/my_recv.dir/my_recv.c.s
+.PHONY : my_recv.c.s
+
+my_send.o: my_send.c.o
+.PHONY : my_send.o
+
+# target to build an object file
+my_send.c.o:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_send.dir/build.make examples/messenger/c/CMakeFiles/my_send.dir/my_send.c.o
+.PHONY : my_send.c.o
+
+my_send.i: my_send.c.i
+.PHONY : my_send.i
+
+# target to preprocess a source file
+my_send.c.i:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_send.dir/build.make examples/messenger/c/CMakeFiles/my_send.dir/my_send.c.i
+.PHONY : my_send.c.i
+
+my_send.s: my_send.c.s
+.PHONY : my_send.s
+
+# target to generate assembly for a file
+my_send.c.s:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f examples/messenger/c/CMakeFiles/my_send.dir/build.make examples/messenger/c/CMakeFiles/my_send.dir/my_send.c.s
+.PHONY : my_send.c.s
 
 recv.o: recv.c.o
 .PHONY : recv.o
@@ -233,10 +309,18 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... my_recv"
+	@echo "... my_send"
 	@echo "... rebuild_cache"
 	@echo "... recv"
 	@echo "... send"
 	@echo "... test"
+	@echo "... my_recv.o"
+	@echo "... my_recv.i"
+	@echo "... my_recv.s"
+	@echo "... my_send.o"
+	@echo "... my_send.i"
+	@echo "... my_send.s"
 	@echo "... recv.o"
 	@echo "... recv.i"
 	@echo "... recv.s"

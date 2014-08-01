@@ -33,28 +33,34 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so")
+  IF(EXISTS "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
     FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so"
+         FILE "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so"
          RPATH "")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby" TYPE MODULE FILES "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby/cproton.so")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so")
+  list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
+   "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
+FILE(INSTALL DESTINATION "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux" TYPE MODULE FILES "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby/cproton.so")
+  IF(EXISTS "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
     FILE(RPATH_REMOVE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so")
+         FILE "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
     IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby/cproton.so")
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby" TYPE FILE FILES "/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/lib/qpid_proton.rb")
+  list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
+   "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/qpid_proton.rb")
+FILE(INSTALL DESTINATION "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux" TYPE FILE FILES "/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/lib/qpid_proton.rb")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/proton/bindings/ruby" TYPE DIRECTORY FILES "/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/lib/qpid_proton")
+  list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
+   "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/qpid_proton")
+FILE(INSTALL DESTINATION "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux" TYPE DIRECTORY FILES "/home/vadim/projects/qpid-proton-0.7/proton-c/bindings/ruby/lib/qpid_proton")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
 
