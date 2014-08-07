@@ -552,78 +552,32 @@ proton-c/CMakeFiles/qpid-proton.dir/src/selectable.c.o.provides: proton-c/CMakeF
 
 proton-c/CMakeFiles/qpid-proton.dir/src/selectable.c.o.provides.build: proton-c/CMakeFiles/qpid-proton.dir/src/selectable.c.o
 
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o: proton-c/CMakeFiles/qpid-proton.dir/flags.make
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o: ../proton-c/src/posix/io.c
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o: proton-c/CMakeFiles/qpid-proton.dir/flags.make
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o: ../proton-c/src/dpdk/driver.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_23)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/qpid-proton.dir/src/posix/io.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/io.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c
 
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/qpid-proton.dir/src/posix/io.c.i"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -E /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/io.c > CMakeFiles/qpid-proton.dir/src/posix/io.c.i
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.i"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -E /home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c > CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.i
 
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/qpid-proton.dir/src/posix/io.c.s"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -S /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/io.c -o CMakeFiles/qpid-proton.dir/src/posix/io.c.s
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.s"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -S /home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c -o CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.s
 
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.requires:
-.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.requires
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.requires:
+.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.requires
 
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.provides: proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.requires
-	$(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.provides.build
-.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.provides
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.provides: proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.requires
+	$(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.provides.build
+.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.provides
 
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.provides.build: proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o: proton-c/CMakeFiles/qpid-proton.dir/flags.make
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o: ../proton-c/src/posix/selector.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_24)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/qpid-proton.dir/src/posix/selector.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/selector.c
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/qpid-proton.dir/src/posix/selector.c.i"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -E /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/selector.c > CMakeFiles/qpid-proton.dir/src/posix/selector.c.i
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/qpid-proton.dir/src/posix/selector.c.s"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -S /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/selector.c -o CMakeFiles/qpid-proton.dir/src/posix/selector.c.s
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.requires:
-.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.requires
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.provides: proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.requires
-	$(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.provides.build
-.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.provides
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.provides.build: proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o: proton-c/CMakeFiles/qpid-proton.dir/flags.make
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o: ../proton-c/src/posix/driver.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_25)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/qpid-proton.dir/src/posix/driver.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/driver.c
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/qpid-proton.dir/src/posix/driver.c.i"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -E /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/driver.c > CMakeFiles/qpid-proton.dir/src/posix/driver.c.i
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/qpid-proton.dir/src/posix/driver.c.s"
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -S /home/vadim/projects/qpid-proton-0.7/proton-c/src/posix/driver.c -o CMakeFiles/qpid-proton.dir/src/posix/driver.c.s
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.requires:
-.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.requires
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.provides: proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.requires
-	$(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.provides.build
-.PHONY : proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.provides
-
-proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.provides.build: proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o
+proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.provides.build: proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o
 
 proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o: proton-c/CMakeFiles/qpid-proton.dir/flags.make
 proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o: ../proton-c/src/platform.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o"
 	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/qpid-proton.dir/src/platform.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/platform.c
 
@@ -646,7 +600,7 @@ proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o.provides.build: proton-c/CM
 
 proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o: proton-c/CMakeFiles/qpid-proton.dir/flags.make
 proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o: ../proton-c/src/ssl/openssl.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o"
 	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/ssl/openssl.c
 
@@ -668,12 +622,12 @@ proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o.provides: proton-c/CMake
 proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o.provides.build: proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o
 
 proton-c/encodings.h: ../proton-c/src/codec/encodings.h.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating encodings.h"
 	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/python /home/vadim/projects/qpid-proton-0.7/proton-c/env.py PYTHONPATH=/home/vadim/projects/qpid-proton-0.7/proton-c /usr/bin/python /home/vadim/projects/qpid-proton-0.7/proton-c/src/codec/encodings.h.py > /home/vadim/projects/qpid-proton-0.7/build/proton-c/encodings.h
 
 proton-c/protocol.h: ../proton-c/src/protocol.h.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating protocol.h"
 	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/python /home/vadim/projects/qpid-proton-0.7/proton-c/env.py PYTHONPATH=/home/vadim/projects/qpid-proton-0.7/proton-c /usr/bin/python /home/vadim/projects/qpid-proton-0.7/proton-c/src/protocol.h.py > /home/vadim/projects/qpid-proton-0.7/build/proton-c/protocol.h
 
@@ -701,56 +655,46 @@ qpid__proton_OBJECTS = \
 "CMakeFiles/qpid-proton.dir/src/messenger/store.c.o" \
 "CMakeFiles/qpid-proton.dir/src/messenger/transform.c.o" \
 "CMakeFiles/qpid-proton.dir/src/selectable.c.o" \
-"CMakeFiles/qpid-proton.dir/src/posix/io.c.o" \
-"CMakeFiles/qpid-proton.dir/src/posix/selector.c.o" \
-"CMakeFiles/qpid-proton.dir/src/posix/driver.c.o" \
+"CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o" \
 "CMakeFiles/qpid-proton.dir/src/platform.c.o" \
 "CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o"
 
 # External object files for target qpid-proton
 qpid__proton_EXTERNAL_OBJECTS =
 
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/object/object.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/util.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/error.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/buffer.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/parser.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/scanner.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/types.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/framing/framing.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/codec/codec.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/codec/decoder.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/codec/encoder.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/dispatcher/dispatcher.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/engine/engine.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/engine/event.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/transport/transport.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/message/message.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/sasl/sasl.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/messenger.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/subscription.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/store.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/transform.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/selectable.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o
-proton-c/libqpid-proton.so.2.0.0: /usr/lib/x86_64-linux-gnu/libssl.so
-proton-c/libqpid-proton.so.2.0.0: /usr/lib/x86_64-linux-gnu/libcrypto.so
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/build.make
-proton-c/libqpid-proton.so.2.0.0: proton-c/CMakeFiles/qpid-proton.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library libqpid-proton.so"
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/object/object.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/util.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/error.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/buffer.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/parser.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/scanner.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/types.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/framing/framing.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/codec/codec.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/codec/decoder.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/codec/encoder.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/dispatcher/dispatcher.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/engine/engine.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/engine/event.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/transport/transport.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/message/message.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/sasl/sasl.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/messenger.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/subscription.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/store.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/transform.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/selectable.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/build.make
+proton-c/libqpid-proton.a: proton-c/CMakeFiles/qpid-proton.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libqpid-proton.a"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && $(CMAKE_COMMAND) -P CMakeFiles/qpid-proton.dir/cmake_clean_target.cmake
 	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qpid-proton.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && $(CMAKE_COMMAND) -E cmake_symlink_library libqpid-proton.so.2.0.0 libqpid-proton.so.2 libqpid-proton.so
-
-proton-c/libqpid-proton.so.2: proton-c/libqpid-proton.so.2.0.0
-
-proton-c/libqpid-proton.so: proton-c/libqpid-proton.so.2.0.0
 
 # Rule to build all files generated by this target.
-proton-c/CMakeFiles/qpid-proton.dir/build: proton-c/libqpid-proton.so
+proton-c/CMakeFiles/qpid-proton.dir/build: proton-c/libqpid-proton.a
 .PHONY : proton-c/CMakeFiles/qpid-proton.dir/build
 
 proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/object/object.c.o.requires
@@ -775,9 +719,7 @@ proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.di
 proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/store.c.o.requires
 proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/messenger/transform.c.o.requires
 proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/selectable.c.o.requires
-proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o.requires
-proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o.requires
-proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o.requires
+proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o.requires
 proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.o.requires
 proton-c/CMakeFiles/qpid-proton.dir/requires: proton-c/CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o.requires
 .PHONY : proton-c/CMakeFiles/qpid-proton.dir/requires

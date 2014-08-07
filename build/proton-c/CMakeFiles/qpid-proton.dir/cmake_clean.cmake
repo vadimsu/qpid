@@ -21,17 +21,13 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/qpid-proton.dir/src/messenger/store.c.o"
   "CMakeFiles/qpid-proton.dir/src/messenger/transform.c.o"
   "CMakeFiles/qpid-proton.dir/src/selectable.c.o"
-  "CMakeFiles/qpid-proton.dir/src/posix/io.c.o"
-  "CMakeFiles/qpid-proton.dir/src/posix/selector.c.o"
-  "CMakeFiles/qpid-proton.dir/src/posix/driver.c.o"
+  "CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o"
   "CMakeFiles/qpid-proton.dir/src/platform.c.o"
   "CMakeFiles/qpid-proton.dir/src/ssl/openssl.c.o"
   "encodings.h"
   "protocol.h"
   "libqpid-proton.pdb"
-  "libqpid-proton.so"
-  "libqpid-proton.so.2.0.0"
-  "libqpid-proton.so.2"
+  "libqpid-proton.a"
 )
 
 # Per-language clean rules from dependency scanning.

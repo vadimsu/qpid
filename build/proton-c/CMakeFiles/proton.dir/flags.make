@@ -8,3 +8,7 @@ C_DEFINES =
 
 # TARGET_FLAGS = -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99
 
+# Custom flags: proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o_FLAGS = -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99
+
+# Custom defines: proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o_DEFINES = USE_CLOCK_GETTIME;USE_UUID_GENERATE;USE_STRERROR_R;USE_ATOLL
+

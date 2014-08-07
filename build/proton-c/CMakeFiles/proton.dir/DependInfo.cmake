@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
+  "/home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c" "/home/vadim/projects/qpid-proton-0.7/build/proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o"
   "/home/vadim/projects/qpid-proton-0.7/proton-c/src/proton.c" "/home/vadim/projects/qpid-proton-0.7/build/proton-c/CMakeFiles/proton.dir/src/proton.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")

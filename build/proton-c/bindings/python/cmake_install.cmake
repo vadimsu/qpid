@@ -77,8 +77,6 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Python"
 FILE(INSTALL DESTINATION "/usr/lib/python2.7/dist-packages" TYPE MODULE FILES "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/python/_cproton.so")
   IF(EXISTS "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
-    FILE(RPATH_REMOVE
-         FILE "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
     IF(CMAKE_INSTALL_DO_STRIP)
       EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/lib/python2.7/dist-packages/_cproton.so")
     ENDIF(CMAKE_INSTALL_DO_STRIP)

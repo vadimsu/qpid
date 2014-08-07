@@ -28,3 +28,4 @@ set (Proton_INCLUDE_DIRS  /usr/include)
 set (Proton_LIBRARIES     optimized /usr/lib/libqpid-proton.so debug /usr/lib/libqpid-proton.so)
 
 set (Proton_FOUND True)
+set (DPDK_LIBS    dpdk.a libnetinet.a libproton_api.a}

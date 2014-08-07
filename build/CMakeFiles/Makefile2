@@ -939,7 +939,7 @@ proton-j/preinstall:
 proton-j/CMakeFiles/proton-j.dir/all:
 	$(MAKE) -f proton-j/CMakeFiles/proton-j.dir/build.make proton-j/CMakeFiles/proton-j.dir/depend
 	$(MAKE) -f proton-j/CMakeFiles/proton-j.dir/build.make proton-j/CMakeFiles/proton-j.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  18 19 20
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  19 20 21
 	@echo "Built target proton-j"
 .PHONY : proton-j/CMakeFiles/proton-j.dir/all
 
@@ -1042,7 +1042,7 @@ clean: proton-c/CMakeFiles/docs.dir/clean
 proton-c/CMakeFiles/proton.dir/all: proton-c/CMakeFiles/qpid-proton.dir/all
 	$(MAKE) -f proton-c/CMakeFiles/proton.dir/build.make proton-c/CMakeFiles/proton.dir/depend
 	$(MAKE) -f proton-c/CMakeFiles/proton.dir/build.make proton-c/CMakeFiles/proton.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  16
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  16 17
 	@echo "Built target proton"
 .PHONY : proton-c/CMakeFiles/proton.dir/all
 
@@ -1052,7 +1052,7 @@ all: proton-c/CMakeFiles/proton.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/CMakeFiles/proton.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/CMakeFiles/proton.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/CMakeFiles/proton.dir/rule
@@ -1077,7 +1077,7 @@ clean: proton-c/CMakeFiles/proton.dir/clean
 proton-c/CMakeFiles/proton-dump.dir/all: proton-c/CMakeFiles/qpid-proton.dir/all
 	$(MAKE) -f proton-c/CMakeFiles/proton-dump.dir/build.make proton-c/CMakeFiles/proton-dump.dir/depend
 	$(MAKE) -f proton-c/CMakeFiles/proton-dump.dir/build.make proton-c/CMakeFiles/proton-dump.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  17
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  18
 	@echo "Built target proton-dump"
 .PHONY : proton-c/CMakeFiles/proton-dump.dir/all
 
@@ -1087,7 +1087,7 @@ all: proton-c/CMakeFiles/proton-dump.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/CMakeFiles/proton-dump.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/CMakeFiles/proton-dump.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/CMakeFiles/proton-dump.dir/rule
@@ -1112,7 +1112,7 @@ clean: proton-c/CMakeFiles/proton-dump.dir/clean
 proton-c/CMakeFiles/qpid-proton.dir/all:
 	$(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/depend
 	$(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
 	@echo "Built target qpid-proton"
 .PHONY : proton-c/CMakeFiles/qpid-proton.dir/all
 
@@ -1122,7 +1122,7 @@ all: proton-c/CMakeFiles/qpid-proton.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/CMakeFiles/qpid-proton.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/CMakeFiles/qpid-proton.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/CMakeFiles/qpid-proton.dir/rule
@@ -1190,7 +1190,7 @@ all: proton-c/bindings/python/CMakeFiles/_cproton.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/bindings/python/CMakeFiles/_cproton.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/bindings/python/CMakeFiles/_cproton.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/bindings/python/CMakeFiles/_cproton.dir/rule
@@ -1240,7 +1240,7 @@ all: proton-c/bindings/ruby/CMakeFiles/cproton-ruby.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/bindings/ruby/CMakeFiles/cproton-ruby.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/bindings/ruby/CMakeFiles/cproton-ruby.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/bindings/ruby/CMakeFiles/cproton-ruby.dir/rule
@@ -1322,7 +1322,7 @@ all: tests/tools/apps/c/CMakeFiles/msgr-recv.dir/all
 
 # Build rule for subdir invocation for target.
 tests/tools/apps/c/CMakeFiles/msgr-recv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 tests/tools/apps/c/CMakeFiles/msgr-recv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : tests/tools/apps/c/CMakeFiles/msgr-recv.dir/rule
@@ -1357,7 +1357,7 @@ all: tests/tools/apps/c/CMakeFiles/msgr-send.dir/all
 
 # Build rule for subdir invocation for target.
 tests/tools/apps/c/CMakeFiles/msgr-send.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 tests/tools/apps/c/CMakeFiles/msgr-send.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : tests/tools/apps/c/CMakeFiles/msgr-send.dir/rule
@@ -1413,7 +1413,7 @@ all: proton-c/src/tests/CMakeFiles/c-engine-tests.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/src/tests/CMakeFiles/c-engine-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/src/tests/CMakeFiles/c-engine-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/src/tests/CMakeFiles/c-engine-tests.dir/rule
@@ -1448,7 +1448,7 @@ all: proton-c/src/tests/CMakeFiles/c-message-tests.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/src/tests/CMakeFiles/c-message-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/src/tests/CMakeFiles/c-message-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/src/tests/CMakeFiles/c-message-tests.dir/rule
@@ -1483,7 +1483,7 @@ all: proton-c/src/tests/CMakeFiles/c-object-tests.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/src/tests/CMakeFiles/c-object-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/src/tests/CMakeFiles/c-object-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/src/tests/CMakeFiles/c-object-tests.dir/rule
@@ -1518,7 +1518,7 @@ all: proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/all
 
 # Build rule for subdir invocation for target.
 proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/rule
@@ -1591,7 +1591,7 @@ all: examples/messenger/c/CMakeFiles/my_recv.dir/all
 
 # Build rule for subdir invocation for target.
 examples/messenger/c/CMakeFiles/my_recv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/my_recv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : examples/messenger/c/CMakeFiles/my_recv.dir/rule
@@ -1626,7 +1626,7 @@ all: examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/all
 
 # Build rule for subdir invocation for target.
 examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : examples/messenger/c/CMakeFiles/my_recv_dpdk.dir/rule
@@ -1661,7 +1661,7 @@ all: examples/messenger/c/CMakeFiles/my_send.dir/all
 
 # Build rule for subdir invocation for target.
 examples/messenger/c/CMakeFiles/my_send.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/my_send.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : examples/messenger/c/CMakeFiles/my_send.dir/rule
@@ -1686,7 +1686,7 @@ clean: examples/messenger/c/CMakeFiles/my_send.dir/clean
 examples/messenger/c/CMakeFiles/recv.dir/all: proton-c/CMakeFiles/qpid-proton.dir/all
 	$(MAKE) -f examples/messenger/c/CMakeFiles/recv.dir/build.make examples/messenger/c/CMakeFiles/recv.dir/depend
 	$(MAKE) -f examples/messenger/c/CMakeFiles/recv.dir/build.make examples/messenger/c/CMakeFiles/recv.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  50
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  49
 	@echo "Built target recv"
 .PHONY : examples/messenger/c/CMakeFiles/recv.dir/all
 
@@ -1696,7 +1696,7 @@ all: examples/messenger/c/CMakeFiles/recv.dir/all
 
 # Build rule for subdir invocation for target.
 examples/messenger/c/CMakeFiles/recv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/recv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : examples/messenger/c/CMakeFiles/recv.dir/rule
@@ -1721,7 +1721,7 @@ clean: examples/messenger/c/CMakeFiles/recv.dir/clean
 examples/messenger/c/CMakeFiles/send.dir/all: proton-c/CMakeFiles/qpid-proton.dir/all
 	$(MAKE) -f examples/messenger/c/CMakeFiles/send.dir/build.make examples/messenger/c/CMakeFiles/send.dir/depend
 	$(MAKE) -f examples/messenger/c/CMakeFiles/send.dir/build.make examples/messenger/c/CMakeFiles/send.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  51
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles  50
 	@echo "Built target send"
 .PHONY : examples/messenger/c/CMakeFiles/send.dir/all
 
@@ -1731,7 +1731,7 @@ all: examples/messenger/c/CMakeFiles/send.dir/all
 
 # Build rule for subdir invocation for target.
 examples/messenger/c/CMakeFiles/send.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 examples/messenger/c/CMakeFiles/send.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles 0
 .PHONY : examples/messenger/c/CMakeFiles/send.dir/rule

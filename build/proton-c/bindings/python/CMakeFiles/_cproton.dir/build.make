@@ -85,7 +85,7 @@ _cproton_OBJECTS = \
 _cproton_EXTERNAL_OBJECTS =
 
 proton-c/bindings/python/_cproton.so: proton-c/bindings/python/CMakeFiles/_cproton.dir/pythonPYTHON_wrap.c.o
-proton-c/bindings/python/_cproton.so: proton-c/libqpid-proton.so.2.0.0
+proton-c/bindings/python/_cproton.so: proton-c/libqpid-proton.a
 proton-c/bindings/python/_cproton.so: /usr/lib/libpython2.7.so
 proton-c/bindings/python/_cproton.so: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/bindings/python/_cproton.so: /usr/lib/x86_64-linux-gnu/libcrypto.so

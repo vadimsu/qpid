@@ -77,7 +77,7 @@ c__parse__url__tests_OBJECTS = \
 c__parse__url__tests_EXTERNAL_OBJECTS =
 
 proton-c/src/tests/c-parse-url-tests: proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/parse-url.c.o
-proton-c/src/tests/c-parse-url-tests: proton-c/libqpid-proton.so.2.0.0
+proton-c/src/tests/c-parse-url-tests: proton-c/libqpid-proton.a
 proton-c/src/tests/c-parse-url-tests: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/src/tests/c-parse-url-tests: /usr/lib/x86_64-linux-gnu/libcrypto.so
 proton-c/src/tests/c-parse-url-tests: proton-c/src/tests/CMakeFiles/c-parse-url-tests.dir/build.make

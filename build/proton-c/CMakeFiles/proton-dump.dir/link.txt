@@ -1,1 +1,1 @@
-/usr/bin/gcc      CMakeFiles/proton-dump.dir/src/proton-dump.c.o  -o proton-dump -rdynamic libqpid-proton.so.2.0.0 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c: 
+/usr/bin/gcc      CMakeFiles/proton-dump.dir/src/proton-dump.c.o  -o proton-dump -rdynamic libqpid-proton.a -luuid -lssl -lcrypto -lrt 

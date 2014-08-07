@@ -102,7 +102,7 @@ msgr__send_EXTERNAL_OBJECTS =
 
 tests/tools/apps/c/msgr-send: tests/tools/apps/c/CMakeFiles/msgr-send.dir/msgr-send.c.o
 tests/tools/apps/c/msgr-send: tests/tools/apps/c/CMakeFiles/msgr-send.dir/msgr-common.c.o
-tests/tools/apps/c/msgr-send: proton-c/libqpid-proton.so.2.0.0
+tests/tools/apps/c/msgr-send: proton-c/libqpid-proton.a
 tests/tools/apps/c/msgr-send: /usr/lib/x86_64-linux-gnu/libssl.so
 tests/tools/apps/c/msgr-send: /usr/lib/x86_64-linux-gnu/libcrypto.so
 tests/tools/apps/c/msgr-send: tests/tools/apps/c/CMakeFiles/msgr-send.dir/build.make

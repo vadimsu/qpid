@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/proton.dir/src/dpdk/driver.c.o"
   "CMakeFiles/proton.dir/src/proton.c.o"
   "proton.pdb"
   "proton"

@@ -1,1 +1,1 @@
-/usr/bin/gcc  -fPIC  -Wl,--no-undefined   -shared -Wl,-soname,_cproton.so -o _cproton.so CMakeFiles/_cproton.dir/pythonPYTHON_wrap.c.o ../../libqpid-proton.so.2.0.0 -lpython2.7 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c: 
+/usr/bin/gcc  -fPIC  -Wl,--no-undefined   -shared -Wl,-soname,_cproton.so -o _cproton.so CMakeFiles/_cproton.dir/pythonPYTHON_wrap.c.o ../../libqpid-proton.a -lpython2.7 -luuid -lssl -lcrypto -lrt 

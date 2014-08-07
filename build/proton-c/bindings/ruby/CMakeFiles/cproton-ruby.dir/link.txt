@@ -1,1 +1,1 @@
-/usr/bin/gcc  -fPIC  -Wl,--no-undefined   -shared -Wl,-soname,cproton.so -o cproton.so CMakeFiles/cproton-ruby.dir/rubyRUBY_wrap.c.o ../../libqpid-proton.so.2.0.0 -lruby1.8 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c: 
+/usr/bin/gcc  -fPIC  -Wl,--no-undefined   -shared -Wl,-soname,cproton.so -o cproton.so CMakeFiles/cproton-ruby.dir/rubyRUBY_wrap.c.o ../../libqpid-proton.a -lruby1.8 -luuid -lssl -lcrypto -lrt 

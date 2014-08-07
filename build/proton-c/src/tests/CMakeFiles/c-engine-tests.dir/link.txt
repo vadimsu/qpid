@@ -1,1 +1,1 @@
-/usr/bin/gcc      CMakeFiles/c-engine-tests.dir/engine.c.o  -o c-engine-tests -rdynamic ../../libqpid-proton.so.2.0.0 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c 
+/usr/bin/gcc      CMakeFiles/c-engine-tests.dir/engine.c.o  -o c-engine-tests -rdynamic ../../libqpid-proton.a -luuid -lssl -lcrypto -lrt 

@@ -83,7 +83,7 @@ cproton__ruby_OBJECTS = \
 cproton__ruby_EXTERNAL_OBJECTS =
 
 proton-c/bindings/ruby/cproton.so: proton-c/bindings/ruby/CMakeFiles/cproton-ruby.dir/rubyRUBY_wrap.c.o
-proton-c/bindings/ruby/cproton.so: proton-c/libqpid-proton.so.2.0.0
+proton-c/bindings/ruby/cproton.so: proton-c/libqpid-proton.a
 proton-c/bindings/ruby/cproton.so: /usr/lib/libruby1.8.so
 proton-c/bindings/ruby/cproton.so: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/bindings/ruby/cproton.so: /usr/lib/x86_64-linux-gnu/libcrypto.so

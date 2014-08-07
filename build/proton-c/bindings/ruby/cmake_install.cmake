@@ -44,8 +44,6 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Ruby")
 FILE(INSTALL DESTINATION "/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux" TYPE MODULE FILES "/home/vadim/projects/qpid-proton-0.7/build/proton-c/bindings/ruby/cproton.so")
   IF(EXISTS "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
-    FILE(RPATH_REMOVE
-         FILE "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
     IF(CMAKE_INSTALL_DO_STRIP)
       EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/lib/ruby/vendor_ruby/1.8/x86_64-linux/cproton.so")
     ENDIF(CMAKE_INSTALL_DO_STRIP)

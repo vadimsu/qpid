@@ -322,6 +322,33 @@ src/dispatcher/dispatcher.c.s:
 	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/dispatcher/dispatcher.c.s
 .PHONY : src/dispatcher/dispatcher.c.s
 
+src/dpdk/driver.o: src/dpdk/driver.c.o
+.PHONY : src/dpdk/driver.o
+
+# target to build an object file
+src/dpdk/driver.c.o:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/proton.dir/build.make proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.o
+.PHONY : src/dpdk/driver.c.o
+
+src/dpdk/driver.i: src/dpdk/driver.c.i
+.PHONY : src/dpdk/driver.i
+
+# target to preprocess a source file
+src/dpdk/driver.c.i:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/proton.dir/build.make proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.i
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.i
+.PHONY : src/dpdk/driver.c.i
+
+src/dpdk/driver.s: src/dpdk/driver.c.s
+.PHONY : src/dpdk/driver.s
+
+# target to generate assembly for a file
+src/dpdk/driver.c.s:
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/proton.dir/build.make proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.s
+	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/dpdk/driver.c.s
+.PHONY : src/dpdk/driver.c.s
+
 src/engine/engine.o: src/engine/engine.c.o
 .PHONY : src/engine/engine.o
 
@@ -610,78 +637,6 @@ src/platform.c.s:
 	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/platform.c.s
 .PHONY : src/platform.c.s
 
-src/posix/driver.o: src/posix/driver.c.o
-.PHONY : src/posix/driver.o
-
-# target to build an object file
-src/posix/driver.c.o:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.o
-.PHONY : src/posix/driver.c.o
-
-src/posix/driver.i: src/posix/driver.c.i
-.PHONY : src/posix/driver.i
-
-# target to preprocess a source file
-src/posix/driver.c.i:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.i
-.PHONY : src/posix/driver.c.i
-
-src/posix/driver.s: src/posix/driver.c.s
-.PHONY : src/posix/driver.s
-
-# target to generate assembly for a file
-src/posix/driver.c.s:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/driver.c.s
-.PHONY : src/posix/driver.c.s
-
-src/posix/io.o: src/posix/io.c.o
-.PHONY : src/posix/io.o
-
-# target to build an object file
-src/posix/io.c.o:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.o
-.PHONY : src/posix/io.c.o
-
-src/posix/io.i: src/posix/io.c.i
-.PHONY : src/posix/io.i
-
-# target to preprocess a source file
-src/posix/io.c.i:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.i
-.PHONY : src/posix/io.c.i
-
-src/posix/io.s: src/posix/io.c.s
-.PHONY : src/posix/io.s
-
-# target to generate assembly for a file
-src/posix/io.c.s:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/io.c.s
-.PHONY : src/posix/io.c.s
-
-src/posix/selector.o: src/posix/selector.c.o
-.PHONY : src/posix/selector.o
-
-# target to build an object file
-src/posix/selector.c.o:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.o
-.PHONY : src/posix/selector.c.o
-
-src/posix/selector.i: src/posix/selector.c.i
-.PHONY : src/posix/selector.i
-
-# target to preprocess a source file
-src/posix/selector.c.i:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.i
-.PHONY : src/posix/selector.c.i
-
-src/posix/selector.s: src/posix/selector.c.s
-.PHONY : src/posix/selector.s
-
-# target to generate assembly for a file
-src/posix/selector.c.s:
-	cd /home/vadim/projects/qpid-proton-0.7/build && $(MAKE) -f proton-c/CMakeFiles/qpid-proton.dir/build.make proton-c/CMakeFiles/qpid-proton.dir/src/posix/selector.c.s
-.PHONY : src/posix/selector.c.s
-
 src/proton-dump.o: src/proton-dump.c.o
 .PHONY : src/proton-dump.o
 
@@ -930,6 +885,9 @@ help:
 	@echo "... src/dispatcher/dispatcher.o"
 	@echo "... src/dispatcher/dispatcher.i"
 	@echo "... src/dispatcher/dispatcher.s"
+	@echo "... src/dpdk/driver.o"
+	@echo "... src/dpdk/driver.i"
+	@echo "... src/dpdk/driver.s"
 	@echo "... src/engine/engine.o"
 	@echo "... src/engine/engine.i"
 	@echo "... src/engine/engine.s"
@@ -966,15 +924,6 @@ help:
 	@echo "... src/platform.o"
 	@echo "... src/platform.i"
 	@echo "... src/platform.s"
-	@echo "... src/posix/driver.o"
-	@echo "... src/posix/driver.i"
-	@echo "... src/posix/driver.s"
-	@echo "... src/posix/io.o"
-	@echo "... src/posix/io.i"
-	@echo "... src/posix/io.s"
-	@echo "... src/posix/selector.o"
-	@echo "... src/posix/selector.i"
-	@echo "... src/posix/selector.s"
 	@echo "... src/proton-dump.o"
 	@echo "... src/proton-dump.i"
 	@echo "... src/proton-dump.s"

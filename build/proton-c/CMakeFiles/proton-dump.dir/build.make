@@ -77,7 +77,7 @@ proton__dump_OBJECTS = \
 proton__dump_EXTERNAL_OBJECTS =
 
 proton-c/proton-dump: proton-c/CMakeFiles/proton-dump.dir/src/proton-dump.c.o
-proton-c/proton-dump: proton-c/libqpid-proton.so.2.0.0
+proton-c/proton-dump: proton-c/libqpid-proton.a
 proton-c/proton-dump: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/proton-dump: /usr/lib/x86_64-linux-gnu/libcrypto.so
 proton-c/proton-dump: proton-c/CMakeFiles/proton-dump.dir/build.make

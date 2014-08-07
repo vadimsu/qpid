@@ -1,1 +1,1 @@
-/usr/bin/gcc      CMakeFiles/proton.dir/src/proton.c.o  -o proton -rdynamic libqpid-proton.so.2.0.0 -luuid -lssl -lcrypto -lrt -Wl,-rpath,/home/vadim/projects/qpid-proton-0.7/build/proton-c: 
+/usr/bin/gcc      CMakeFiles/proton.dir/src/dpdk/driver.c.o CMakeFiles/proton.dir/src/proton.c.o  -o proton -rdynamic ../../proton-c/libdpdk.a libqpid-proton.a -luuid -lssl -lcrypto -lrt 

@@ -46,9 +46,32 @@ include proton-c/CMakeFiles/proton.dir/progress.make
 # Include the compile flags for this target's objects.
 include proton-c/CMakeFiles/proton.dir/flags.make
 
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o: proton-c/CMakeFiles/proton.dir/flags.make
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o: ../proton-c/src/dpdk/driver.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/proton.dir/src/dpdk/driver.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c
+
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proton.dir/src/dpdk/driver.c.i"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -E /home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c > CMakeFiles/proton.dir/src/dpdk/driver.c.i
+
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proton.dir/src/dpdk/driver.c.s"
+	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) -DUSE_CLOCK_GETTIME -DUSE_UUID_GENERATE -DUSE_STRERROR_R -DUSE_ATOLL $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -S /home/vadim/projects/qpid-proton-0.7/proton-c/src/dpdk/driver.c -o CMakeFiles/proton.dir/src/dpdk/driver.c.s
+
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.requires:
+.PHONY : proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.requires
+
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.provides: proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.requires
+	$(MAKE) -f proton-c/CMakeFiles/proton.dir/build.make proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.provides.build
+.PHONY : proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.provides
+
+proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.provides.build: proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o
+
 proton-c/CMakeFiles/proton.dir/src/proton.c.o: proton-c/CMakeFiles/proton.dir/flags.make
 proton-c/CMakeFiles/proton.dir/src/proton.c.o: ../proton-c/src/proton.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vadim/projects/qpid-proton-0.7/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object proton-c/CMakeFiles/proton.dir/src/proton.c.o"
 	cd /home/vadim/projects/qpid-proton-0.7/build/proton-c && /usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -Werror -Wall -pedantic-errors -Wstrict-prototypes -Wc++-compat -Wvla -Wsign-compare -Wwrite-strings -std=gnu99 -o CMakeFiles/proton.dir/src/proton.c.o   -c /home/vadim/projects/qpid-proton-0.7/proton-c/src/proton.c
 
@@ -71,13 +94,16 @@ proton-c/CMakeFiles/proton.dir/src/proton.c.o.provides.build: proton-c/CMakeFile
 
 # Object files for target proton
 proton_OBJECTS = \
+"CMakeFiles/proton.dir/src/dpdk/driver.c.o" \
 "CMakeFiles/proton.dir/src/proton.c.o"
 
 # External object files for target proton
 proton_EXTERNAL_OBJECTS =
 
+proton-c/proton: proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o
 proton-c/proton: proton-c/CMakeFiles/proton.dir/src/proton.c.o
-proton-c/proton: proton-c/libqpid-proton.so.2.0.0
+proton-c/proton: ../proton-c/libdpdk.a
+proton-c/proton: proton-c/libqpid-proton.a
 proton-c/proton: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/proton: /usr/lib/x86_64-linux-gnu/libcrypto.so
 proton-c/proton: proton-c/CMakeFiles/proton.dir/build.make
@@ -89,6 +115,7 @@ proton-c/proton: proton-c/CMakeFiles/proton.dir/link.txt
 proton-c/CMakeFiles/proton.dir/build: proton-c/proton
 .PHONY : proton-c/CMakeFiles/proton.dir/build
 
+proton-c/CMakeFiles/proton.dir/requires: proton-c/CMakeFiles/proton.dir/src/dpdk/driver.c.o.requires
 proton-c/CMakeFiles/proton.dir/requires: proton-c/CMakeFiles/proton.dir/src/proton.c.o.requires
 .PHONY : proton-c/CMakeFiles/proton.dir/requires
 

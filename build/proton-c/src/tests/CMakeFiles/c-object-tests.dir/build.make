@@ -77,7 +77,7 @@ c__object__tests_OBJECTS = \
 c__object__tests_EXTERNAL_OBJECTS =
 
 proton-c/src/tests/c-object-tests: proton-c/src/tests/CMakeFiles/c-object-tests.dir/object.c.o
-proton-c/src/tests/c-object-tests: proton-c/libqpid-proton.so.2.0.0
+proton-c/src/tests/c-object-tests: proton-c/libqpid-proton.a
 proton-c/src/tests/c-object-tests: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/src/tests/c-object-tests: /usr/lib/x86_64-linux-gnu/libcrypto.so
 proton-c/src/tests/c-object-tests: proton-c/src/tests/CMakeFiles/c-object-tests.dir/build.make

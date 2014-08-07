@@ -77,7 +77,7 @@ c__message__tests_OBJECTS = \
 c__message__tests_EXTERNAL_OBJECTS =
 
 proton-c/src/tests/c-message-tests: proton-c/src/tests/CMakeFiles/c-message-tests.dir/message.c.o
-proton-c/src/tests/c-message-tests: proton-c/libqpid-proton.so.2.0.0
+proton-c/src/tests/c-message-tests: proton-c/libqpid-proton.a
 proton-c/src/tests/c-message-tests: /usr/lib/x86_64-linux-gnu/libssl.so
 proton-c/src/tests/c-message-tests: /usr/lib/x86_64-linux-gnu/libcrypto.so
 proton-c/src/tests/c-message-tests: proton-c/src/tests/CMakeFiles/c-message-tests.dir/build.make
