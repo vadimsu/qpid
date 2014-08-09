@@ -30,11 +30,11 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <fcntl.h>
-
+#define DPDK
 #include <proton/driver.h>
 #include <proton/driver_extras.h>
 #include <proton/error.h>
-#include <proton/io.h>
+//#include <proton/io.h>
 #include <proton/sasl.h>
 #include <proton/ssl.h>
 #include <proton/util.h>
@@ -42,7 +42,14 @@
 #include "../util.h"
 #include "../platform.h"
 #include "../ssl/ssl-internal.h"
-
+#include "proton_api.h"
+extern void pn_listen_set_user_data(void *socket,void *data);
+extern void pn_connected_set_user_data(void *socket,void *data);
+extern void *proton_app_get_next_listener(void);
+extern void *proton_app_get_next_reader(int *write_queue_present);
+extern void *proton_app_get_next_writer(int *read_queue_present);
+extern void proton_app_periodic(void);
+extern void proton_app_close(void *sock);
 /* Decls */
 
 #define PN_SEL_RD (0x0001)
@@ -74,7 +81,7 @@ struct pn_listener_t {
   pn_listener_t *listener_prev;
   int idx;
   bool pending;
-  int fd;
+  void *fd;
   bool closed;
   void *context;
 };
@@ -90,7 +97,7 @@ struct pn_connector_t {
   bool pending_tick;
   bool pending_read;
   bool pending_write;
-  int fd;
+  pn_socket_t fd;
   int status;
   pn_trace_t trace;
   bool closed;
@@ -103,9 +110,23 @@ struct pn_connector_t {
   pn_listener_t *listener;
   void *context;
 };
+extern void app_glue_init(void);
+extern int dpdk_linux_tcpip_init(int argc,char const **argv);
+pn_io_t *pn_io(void)
+{
+	const char *argv[] = { "ccc", "-c", "3", "-n", "1", "--", "-p", "1", "-a", "192.168.1.1" };
+	app_glue_init();
+	dpdk_linux_tcpip_init(10,argv);
+    return NULL;
+}
 
+void pn_io_free(pn_io_t *io)
+{
+  return;
+}
 /* Impls */
-
+//static pn_listener_t *pn_listener_fd(pn_driver_t *driver, pn_socket_t sock, void *context);
+//static pn_connector_t *pn_connector_fd(pn_driver_t *driver, pn_socket_t fd, void *context);
 // listener
 
 static void pn_driver_add_listener(pn_driver_t *d, pn_listener_t *l)
@@ -128,18 +149,18 @@ static void pn_driver_remove_listener(pn_driver_t *d, pn_listener_t *l)
   l->driver = NULL;
   d->listener_count--;
 }
-
+void *pn_dpdk_listen(void *dummy,const char *host, uint16_t port);
 pn_listener_t *pn_listener(pn_driver_t *driver, const char *host,
                            const char *port, void* context)
 {
   if (!driver) return NULL;
 
-  pn_socket_t sock = pn_listen(driver->io, host, port);
-  if (sock == PN_INVALID_SOCKET) {
+  pn_socket_t sock = pn_dpdk_listen(driver->io,/*host*/"192.168.1.1", atoi(port));
+  if (sock == NULL) {
     return NULL;
   } else {
     pn_listener_t *l = pn_listener_fd(driver, sock, context);
-
+    pn_listen_set_user_data(sock,l);
     if (driver->trace & (PN_TRACE_FRM | PN_TRACE_RAW | PN_TRACE_DRV))
       fprintf(stderr, "Listening on %s:%s\n", host, port);
 
@@ -147,7 +168,7 @@ pn_listener_t *pn_listener(pn_driver_t *driver, const char *host,
   }
 }
 
-pn_listener_t *pn_listener_fd(pn_driver_t *driver, int fd, void *context)
+pn_listener_t *pn_listener_fd(pn_driver_t *driver, pn_socket_t sock, void *context)
 {
   if (!driver) return NULL;
 
@@ -158,7 +179,7 @@ pn_listener_t *pn_listener_fd(pn_driver_t *driver, int fd, void *context)
   l->listener_prev = NULL;
   l->idx = 0;
   l->pending = false;
-  l->fd = fd;
+  l->fd = sock;
   l->closed = false;
   l->context = context;
 
@@ -201,13 +222,14 @@ pn_connector_t *pn_listener_accept(pn_listener_t *l)
   if (!l || !l->pending) return NULL;
   char name[PN_NAME_MAX];
 
-  pn_socket_t sock = pn_accept(l->driver->io, l->fd, name, PN_NAME_MAX);
-  if (sock == PN_INVALID_SOCKET) {
+  pn_socket_t sock = pn_accept(l->driver->io,l->fd, name, PN_NAME_MAX);
+  if (sock == NULL) {
     return NULL;
   } else {
     if (l->driver->trace & (PN_TRACE_FRM | PN_TRACE_RAW | PN_TRACE_DRV))
       fprintf(stderr, "Accepted from %s\n", name);
     pn_connector_t *c = pn_connector_fd(l->driver, sock, NULL);
+    pn_connected_set_user_data(sock,c);
     snprintf(c->name, PN_NAME_MAX, "%s", name);
     c->listener = l;
     return c;
@@ -219,8 +241,8 @@ void pn_listener_close(pn_listener_t *l)
   if (!l) return;
   if (l->closed) return;
 
-  if (close(l->fd) == -1)
-    perror("close");
+  proton_app_close(l->fd);
+
   l->closed = true;
 }
 
@@ -263,16 +285,17 @@ pn_connector_t *pn_connector(pn_driver_t *driver, const char *host,
 {
   if (!driver) return NULL;
 
-  pn_socket_t sock = pn_connect(driver->io, host, port);
+  pn_socket_t sock = pn_connect(driver->io,host, port);
 
   pn_connector_t *c = pn_connector_fd(driver, sock, context);
   snprintf(c->name, PN_NAME_MAX, "%s:%s", host, port);
   if (driver->trace & (PN_TRACE_FRM | PN_TRACE_RAW | PN_TRACE_DRV))
     fprintf(stderr, "Connected to %s\n", c->name);
+  pn_connected_set_user_data(sock,c);
   return c;
 }
 
-pn_connector_t *pn_connector_fd(pn_driver_t *driver, int fd, void *context)
+pn_connector_t *pn_connector_fd(pn_driver_t *driver, pn_socket_t fd, void *context)
 {
   if (!driver) return NULL;
 
@@ -300,7 +323,6 @@ pn_connector_t *pn_connector_fd(pn_driver_t *driver, int fd, void *context)
   c->listener = NULL;
 
   pn_connector_trace(c, driver->trace);
-
   pn_driver_add_connector(driver, c);
   return c;
 }
@@ -386,8 +408,7 @@ void pn_connector_close(pn_connector_t *ctor)
   if (!ctor) return;
 
   ctor->status = 0;
-  if (close(ctor->fd) == -1)
-    perror("close");
+  proton_app_close(ctor->fd);
   ctor->closed = true;
   ctor->driver->closed_count++;
 }
@@ -466,7 +487,13 @@ void pn_connector_process(pn_connector_t *c)
         c->status |= PN_SEL_RD;
         if (c->pending_read) {
           c->pending_read = false;
-          ssize_t n =  pn_recv(c->driver->io, c->fd, pn_transport_tail(transport), capacity);
+          ssize_t n =  pn_recv(c->driver->io,c->fd, pn_transport_tail(transport), capacity);
+          /*if(n < capacity) {
+        	  c->pending_read = false;
+          }
+          else if((n > 0)&&(c->connector_next == NULL)&&(c->connector_prev == NULL)) {
+        	  pn_driver_add_connector(c->driver, c);
+          }*/
           if (n < 0) {
             if (errno != EAGAIN) {
               perror("read");
@@ -479,6 +506,20 @@ void pn_connector_process(pn_connector_t *c)
             c->input_done = true;
             pn_transport_close_tail( transport );
           } else {
+#if 0
+        	  {
+        		  int printed = 0;
+        		  char *buf = pn_transport_tail(transport);
+        		  printf("QPID received %d\n",(int)n);
+        		  for(;printed < n;printed+=8) {
+        			  printf("%x %x %x %x %x %x %x %x\n",
+        					  buf[printed + 0],buf[printed + 1],buf[printed + 2],
+        					  buf[printed + 3],buf[printed + 4],buf[printed + 5],
+        					  buf[printed + 6],buf[printed + 7]);
+        			  //printf("OR\n %s\n",buf+printed);
+        		  }
+        	  }
+#endif
             if (pn_transport_process(transport, (size_t) n) < 0) {
               c->status &= ~PN_SEL_RD;
               c->input_done = true;
@@ -505,11 +546,18 @@ void pn_connector_process(pn_connector_t *c)
     ///
     if (!c->output_done) {
       ssize_t pending = pn_transport_pending(transport);
+      //printf("%s %d %d %d\n",__FILE__,__LINE__,(int)pending,c->pending_write);
       if (pending > 0) {
         c->status |= PN_SEL_WR;
         if (c->pending_write) {
           c->pending_write = false;
-          ssize_t n = pn_send(c->driver->io, c->fd, pn_transport_head(transport), pending);
+          ssize_t n = pn_send(c->driver->io,c->fd, pn_transport_head(transport), pending);
+          if(n < pending) {
+        	  c->pending_write = false;
+          }
+          else if((n > 0)&&(c->connector_next == NULL)&&(c->connector_prev == NULL)) {
+              pn_driver_add_connector(c->driver, c);
+          }
           if (n < 0) {
             // XXX
             if (errno != EAGAIN) {
@@ -567,12 +615,12 @@ pn_driver_t *pn_driver()
               (pn_env_bool("PN_TRACE_FRM") ? PN_TRACE_FRM : PN_TRACE_OFF) |
               (pn_env_bool("PN_TRACE_DRV") ? PN_TRACE_DRV : PN_TRACE_OFF));
   d->wakeup = 0;
-
+#if 0 /* VADIM */
   // XXX
   if (pipe(d->ctrl)) {
     perror("Can't create control pipe");
   }
-
+#endif
   return d;
 }
 
@@ -609,135 +657,7 @@ void pn_driver_free(pn_driver_t *d)
 
 int pn_driver_wakeup(pn_driver_t *d)
 {
-  if (d) {
-    ssize_t count = write(d->ctrl[1], "x", 1);
-    if (count <= 0) {
-      return count;
-    } else {
-      return 0;
-    }
-  } else {
-    return PN_ARG_ERR;
-  }
-}
-
-static void pn_driver_rebuild(pn_driver_t *d)
-{
-  size_t size = d->listener_count + d->connector_count;
-  while (d->capacity < size + 1) {
-    d->capacity = d->capacity ? 2*d->capacity : 16;
-    d->fds = (struct pollfd *) realloc(d->fds, d->capacity*sizeof(struct pollfd));
-  }
-
-  d->wakeup = 0;
-  d->nfds = 0;
-
-  d->fds[d->nfds].fd = d->ctrl[0];
-  d->fds[d->nfds].events = POLLIN;
-  d->fds[d->nfds].revents = 0;
-  d->nfds++;
-
-  pn_listener_t *l = d->listener_head;
-  for (unsigned i = 0; i < d->listener_count; i++) {
-    d->fds[d->nfds].fd = l->fd;
-    d->fds[d->nfds].events = POLLIN;
-    d->fds[d->nfds].revents = 0;
-    l->idx = d->nfds;
-    d->nfds++;
-    l = l->listener_next;
-  }
-
-  pn_connector_t *c = d->connector_head;
-  for (unsigned i = 0; i < d->connector_count; i++)
-  {
-    if (!c->closed) {
-      d->wakeup = pn_timestamp_min(d->wakeup, c->wakeup);
-      d->fds[d->nfds].fd = c->fd;
-      d->fds[d->nfds].events = (c->status & PN_SEL_RD ? POLLIN : 0) | (c->status & PN_SEL_WR ? POLLOUT : 0);
-      d->fds[d->nfds].revents = 0;
-      c->idx = d->nfds;
-      d->nfds++;
-    }
-    c = c->connector_next;
-  }
-}
-
-void pn_driver_wait_1(pn_driver_t *d)
-{
-  pn_driver_rebuild(d);
-}
-
-int pn_driver_wait_2(pn_driver_t *d, int timeout)
-{
-  if (d->wakeup) {
-    pn_timestamp_t now = pn_i_now();
-    if (now >= d->wakeup)
-      timeout = 0;
-    else
-      timeout = (timeout < 0) ? d->wakeup-now : pn_min(timeout, d->wakeup - now);
-  }
-  int result = poll(d->fds, d->nfds, d->closed_count > 0 ? 0 : timeout);
-  if (result == -1)
-    pn_i_error_from_errno(d->error, "poll");
-  return result;
-}
-
-int pn_driver_wait_3(pn_driver_t *d)
-{
-  bool woken = false;
-  if (d->fds[0].revents & POLLIN) {
-    woken = true;
-    //clear the pipe
-    char buffer[512];
-    while (read(d->ctrl[0], buffer, 512) == 512);
-  }
-
-  pn_listener_t *l = d->listener_head;
-  while (l) {
-    l->pending = (l->idx && d->fds[l->idx].revents & POLLIN);
-    l = l->listener_next;
-  }
-
-  pn_timestamp_t now = pn_i_now();
-  pn_connector_t *c = d->connector_head;
-  while (c) {
-    if (c->closed) {
-      c->pending_read = false;
-      c->pending_write = false;
-      c->pending_tick = false;
-    } else {
-      int idx = c->idx;
-      c->pending_read = (idx && d->fds[idx].revents & POLLIN);
-      c->pending_write = (idx && d->fds[idx].revents & POLLOUT);
-      c->pending_tick = (c->wakeup &&  c->wakeup <= now);
-      if (idx && d->fds[idx].revents & POLLERR)
-          pn_connector_close(c);
-      else if (idx && (d->fds[idx].revents & POLLHUP)) {
-        if (c->trace & (PN_TRACE_FRM | PN_TRACE_RAW | PN_TRACE_DRV)) {
-          fprintf(stderr, "hangup on connector %s\n", c->name);
-        }
-        /* poll() is signalling POLLHUP. to see what happened we need
-         * to do an actual recv() to get the error code. But we might
-         * be in a state where we're not interested in input, in that
-         * case try to get the error code via send() */
-        if (d->fds[idx].events & POLLIN)
-          c->pending_read = true;
-        else if (d->fds[idx].events & POLLOUT)
-          c->pending_write = true;
-      } else if (idx && (d->fds[idx].revents & ~(POLLIN|POLLOUT|POLLERR|POLLHUP))) {
-          if (c->trace & (PN_TRACE_FRM | PN_TRACE_RAW | PN_TRACE_DRV)) {
-            fprintf(stderr, "Unexpected poll events: %04x on %s\n",
-                    d->fds[idx].revents, c->name);
-          }
-      }
-    }
-    c = c->connector_next;
-  }
-
-  d->listener_next = d->listener_head;
-  d->connector_next = d->connector_head;
-
-  return woken ? PN_INTR : 0;
+  return PN_ARG_ERR;
 }
 
 //
@@ -752,39 +672,58 @@ int pn_driver_wait_3(pn_driver_t *d)
 //
 int pn_driver_wait(pn_driver_t *d, int timeout)
 {
-    pn_driver_wait_1(d);
-    int result = pn_driver_wait_2(d, timeout);
-    if (result == -1)
-        return pn_error_code(d->error);
-    return pn_driver_wait_3(d);
+	proton_app_periodic();
+	return 0;
 }
 
 pn_listener_t *pn_driver_listener(pn_driver_t *d) {
   if (!d) return NULL;
 
-  while (d->listener_next) {
-    pn_listener_t *l = d->listener_next;
-    d->listener_next = l->listener_next;
-
-    if (l->pending) {
-      return l;
-    }
+  pn_listener_t *l = (pn_listener_t *)proton_app_get_next_listener();
+  if(!l) {
+	  return NULL;
   }
-
-  return NULL;
+  l->pending = 1;
+  return l;
 }
 
 pn_connector_t *pn_driver_connector(pn_driver_t *d) {
+	static int iterations = 0;
   if (!d) return NULL;
-
-  while (d->connector_next) {
-    pn_connector_t *c = d->connector_next;
-    d->connector_next = c->connector_next;
-
-    if (c->closed || c->pending_read || c->pending_write || c->pending_tick) {
-      return c;
-    }
+  int flag = 0;
+  iterations++;
+  if(iterations == 1000) {
+	  iterations = 0;
+	  return NULL;
   }
-
+  pn_connector_t *c = (pn_connector_t *)proton_app_get_next_reader(&flag);
+  if(c) {
+	  c->pending_read = 1;
+	  printf("%s %d %d\n",__FILE__,__LINE__,flag);
+	  //c->pending_write = flag;
+	  return c;
+  }
+  c = (pn_connector_t *)proton_app_get_next_writer(&flag);
+  if(c) {
+  	  c->pending_write = 1;
+  	printf("%s %d %d\n",__FILE__,__LINE__,flag);
+  	//c->pending_read = flag;
+  	  return c;
+  }
+  /*if(d->connector_next) {
+	  c = d->connector_next;
+  }
+  else {
+	  c = pn_connector_head(d);
+  }
+  if(c) {
+	  if((c->transport == NULL)&&(pn_transport_pending(c->transport) == 0)) {
+		  return NULL;
+	  }
+	  d->connector_next = pn_connector_next(c);
+	  pn_driver_remove_connector(d,c);
+	  c->pending_write = 1;
+  }*/
+  //c->pending_tick
   return NULL;
 }
