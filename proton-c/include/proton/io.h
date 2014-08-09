@@ -39,7 +39,11 @@ typedef unsigned int pn_socket_t;
 #endif
 #define PN_INVALID_SOCKET (pn_socket_t)(~0)
 #else
+#if defined (DPDK)
+typedef void* pn_socket_t;
+#else
 typedef int pn_socket_t;
+#endif
 #define PN_INVALID_SOCKET (-1)
 #endif
 

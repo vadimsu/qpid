@@ -38,7 +38,7 @@
 #include "transform.h"
 #include "subscription.h"
 #include "../selectable.h"
-
+#include "../dpdk/proton_api.h"
 typedef struct pn_link_ctx_t pn_link_ctx_t;
 
 typedef struct {

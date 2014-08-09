@@ -16,7 +16,7 @@
 # specific language governing permissions and limitations
 # under the License.
 #
-
+#STATIC /home/vadim/projects/qpid-proton-0.7/proton-c/libdpdk.a STATIC /home/vadim/projects/qpid-proton-0.7/proton-c/libnetinet.a STATIC /home/vadim/projects/qpid-proton-0.7/proton-c/libproton_api.a
 include(CheckLibraryExists)
 include(CheckSymbolExists)
 
@@ -76,15 +76,9 @@ add_custom_command (
   )
 
 # Select driver
-if(PN_WINAPI)
-  set (pn_io_impl src/windows/io.c)
-  set (pn_selector_impl src/windows/selector.c)
-  set (pn_driver_impl src/windows/driver.c)
-else(PN_WINAPI)
-  set (pn_io_impl src/posix/io.c)
-  set (pn_selector_impl src/posix/selector.c)
-  set (pn_driver_impl src/posix/driver.c)
-endif(PN_WINAPI)
+# set (pn_io_impl src/posix/io.c)
+# set (pn_selector_impl src/posix/selector.c)
+set (pn_driver_impl src/dpdk/driver.c)
 
 # Link in openssl if present
 if (SSL_IMPL STREQUAL openssl)
@@ -244,8 +238,6 @@ add_subdirectory(docs/man)
 add_subdirectory(../tests/tools/apps/c ../tests/tools/apps/c)
 
 set (qpid-proton-platform
-  ${pn_io_impl}
-  ${pn_selector_impl}
   ${pn_driver_impl}
   src/platform.c
   ${pn_driver_ssl_impl}
@@ -298,7 +290,7 @@ set_source_files_properties (
   )
 
 add_library (
-  qpid-proton SHARED
+  qpid-proton STATIC
 
   ${qpid-proton-core}
   ${qpid-proton-platform}
@@ -319,8 +311,8 @@ if (MSVC)
   include(WindowsC99CheckDef)
 endif(MSVC)
 
-add_executable (proton src/proton.c)
-target_link_libraries (proton qpid-proton)
+add_executable (proton ${pn_driver_impl} src/proton.c)
+target_link_libraries (proton /home/vadim/projects/qpid-proton-0.7/proton-c/libdpdk.a qpid-proton)
 
 add_executable (proton-dump src/proton-dump.c)
 target_link_libraries (proton-dump qpid-proton)

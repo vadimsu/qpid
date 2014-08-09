@@ -27,8 +27,8 @@ add_executable(my_recv_dpdk my_recv.c)
 
 include_directories(${Proton_INCLUDE_DIRS})
 
-target_link_libraries(recv ${Proton_LIBRARIES})
-target_link_libraries(send ${Proton_LIBRARIES})
-target_link_libraries(my_recv ${Proton_LIBRARIES})
-target_link_libraries(my_send ${Proton_LIBRARIES})
-target_link_libraries(my_recv_dpdk ${Proton_LIBRARIES})
+target_link_libraries(recv ${Proton_LIBRARIES} libdpdk.a)
+target_link_libraries(send ${Proton_LIBRARIES} libdpdk.a)
+target_link_libraries(my_recv ${Proton_LIBRARIES} libdpdk.a)
+target_link_libraries(my_send ${Proton_LIBRARIES} libdpdk.a)
+target_link_libraries(my_recv_dpdk ${Proton_LIBRARIES} libdpdk.a)
