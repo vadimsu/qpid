@@ -122,7 +122,8 @@ struct server_context {
   bool quiet;
   int size;
 };
-
+unsigned long proton_bytes_received = 0;
+unsigned long proton_messages_received = 0;
 void server_callback(pn_connector_t *ctor)
 {
   pn_sasl_t *sasl = pn_connector_sasl(ctor);
@@ -204,6 +205,8 @@ void server_callback(pn_connector_t *ctor)
         printf("received delivery: %s\n", tagstr);
         printf("  payload = \"");
       }
+      proton_bytes_received+=tag.size;
+      proton_messages_received++;
       while (true) {
         ssize_t n = pn_link_recv(link, msg, 48);
         if (n == PN_EOS) {
@@ -419,7 +422,7 @@ int main(int argc, char **argv)
   char *address = (char *) "queue";
   char *mechanism = (char *) "ANONYMOUS";
   int count = 1;
-  bool quiet = false;
+  bool quiet = /*false*/true;
   int high = 100;
   int low = 50;
   int size = 32;
@@ -480,14 +483,14 @@ int main(int argc, char **argv)
   char *scheme = NULL;
   char *user = NULL;
   char *pass = NULL;
-  char *host = (char *) "0.0.0.0";
+  char *host = (char *) /*"0.0.0.0"*/"192.168.1.2";
   char *port = (char *) "5672";
   char *path = NULL;
 
   pni_parse_url(url, &scheme, &user, &pass, &host, &port, &path);
 
   pn_driver_t *drv = pn_driver();
-  if (url) {
+  /*if (url)*/while(1) {
     struct client_context ctx = {false, false, count, count, drv, quiet, size, high, low};
     ctx.username = user;
     ctx.password = pass;
@@ -504,14 +507,15 @@ int main(int argc, char **argv)
         pn_connector_process(c);
         client_callback(c);
         if (pn_connector_closed(c)) {
-	  pn_connection_free(pn_connector_connection(c));
-          pn_connector_free(c);
+        	pn_connection_free(pn_connector_connection(c));
+        	printf("%s %d %p\n",__FILE__,__LINE__,(void*)c);
+        	pn_connector_free(c);
         } else {
           pn_connector_process(c);
         }
       }
     }
-  } else {
+  }/* else*/ {
     struct server_context ctx = {0, quiet, size};
     if (!pn_listener(drv, host, port, &ctx)) error_exit("listener failed\n");
     while (true) {
@@ -528,6 +532,7 @@ int main(int argc, char **argv)
         pn_connector_process(c);
         server_callback(c);
         if (pn_connector_closed(c)) {
+        	printf("%s %d %p %d\n",__FILE__,__LINE__,(void *)pn_connector_connection(c),pn_refcount((void*)pn_connector_connection(c)));
 	  pn_connection_free(pn_connector_connection(c));
           pn_connector_free(c);
         } else {

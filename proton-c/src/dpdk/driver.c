@@ -48,6 +48,7 @@ extern void pn_connected_set_user_data(void *socket,void *data);
 extern void *proton_app_get_next_listener(void);
 extern void *proton_app_get_next_reader(int *write_queue_present);
 extern void *proton_app_get_next_writer(int *read_queue_present);
+extern void *proton_app_get_next_closed(void);
 extern void proton_app_periodic(void);
 extern void proton_app_close(void *sock);
 /* Decls */
@@ -323,6 +324,7 @@ pn_connector_t *pn_connector_fd(pn_driver_t *driver, pn_socket_t fd, void *conte
   c->listener = NULL;
 
   pn_connector_trace(c, driver->trace);
+
   pn_driver_add_connector(driver, c);
   return c;
 }
@@ -408,7 +410,7 @@ void pn_connector_close(pn_connector_t *ctor)
   if (!ctor) return;
 
   ctor->status = 0;
-  proton_app_close(ctor->fd);
+  pn_close(NULL,ctor->fd);
   ctor->closed = true;
   ctor->driver->closed_count++;
 }
@@ -488,12 +490,6 @@ void pn_connector_process(pn_connector_t *c)
         if (c->pending_read) {
           c->pending_read = false;
           ssize_t n =  pn_recv(c->driver->io,c->fd, pn_transport_tail(transport), capacity);
-          /*if(n < capacity) {
-        	  c->pending_read = false;
-          }
-          else if((n > 0)&&(c->connector_next == NULL)&&(c->connector_prev == NULL)) {
-        	  pn_driver_add_connector(c->driver, c);
-          }*/
           if (n < 0) {
             if (errno != EAGAIN) {
               perror("read");
@@ -506,20 +502,6 @@ void pn_connector_process(pn_connector_t *c)
             c->input_done = true;
             pn_transport_close_tail( transport );
           } else {
-#if 0
-        	  {
-        		  int printed = 0;
-        		  char *buf = pn_transport_tail(transport);
-        		  printf("QPID received %d\n",(int)n);
-        		  for(;printed < n;printed+=8) {
-        			  printf("%x %x %x %x %x %x %x %x\n",
-        					  buf[printed + 0],buf[printed + 1],buf[printed + 2],
-        					  buf[printed + 3],buf[printed + 4],buf[printed + 5],
-        					  buf[printed + 6],buf[printed + 7]);
-        			  //printf("OR\n %s\n",buf+printed);
-        		  }
-        	  }
-#endif
             if (pn_transport_process(transport, (size_t) n) < 0) {
               c->status &= ~PN_SEL_RD;
               c->input_done = true;
@@ -546,18 +528,11 @@ void pn_connector_process(pn_connector_t *c)
     ///
     if (!c->output_done) {
       ssize_t pending = pn_transport_pending(transport);
-      //printf("%s %d %d %d\n",__FILE__,__LINE__,(int)pending,c->pending_write);
       if (pending > 0) {
         c->status |= PN_SEL_WR;
         if (c->pending_write) {
           c->pending_write = false;
           ssize_t n = pn_send(c->driver->io,c->fd, pn_transport_head(transport), pending);
-          if(n < pending) {
-        	  c->pending_write = false;
-          }
-          else if((n > 0)&&(c->connector_next == NULL)&&(c->connector_prev == NULL)) {
-              pn_driver_add_connector(c->driver, c);
-          }
           if (n < 0) {
             // XXX
             if (errno != EAGAIN) {
@@ -683,30 +658,58 @@ pn_listener_t *pn_driver_listener(pn_driver_t *d) {
   if(!l) {
 	  return NULL;
   }
+  //printf("%s %d\n",__FILE__,__LINE__);
   l->pending = 1;
   return l;
 }
-
+int calls_to_driver_connector = 0;
+int calls_to_driver_connector_rx = 0;
+int calls_to_driver_connector_tx = 0;
 pn_connector_t *pn_driver_connector(pn_driver_t *d) {
 	static int iterations = 0;
   if (!d) return NULL;
   int flag = 0;
   iterations++;
+  calls_to_driver_connector++;
   if(iterations == 1000) {
 	  iterations = 0;
 	  return NULL;
   }
-  pn_connector_t *c = (pn_connector_t *)proton_app_get_next_reader(&flag);
-  if(c) {
+  pn_connector_t *c = (pn_connector_t *)proton_app_get_next_closed();
+  if(!c) {
+	  goto get_reader;
+  }
+  if(c->closed) {
+	  c = NULL;
+  }
+  else {
+	  c->closed = 1;
+	  return c;
+  }
+get_reader:
+  c = (pn_connector_t *)proton_app_get_next_reader(&flag);
+  if(!c) {
+  	  goto get_writer;
+  }
+  if(c->closed) {
+  	  c = NULL;
+  }
+  else {
 	  c->pending_read = 1;
-	  printf("%s %d %d\n",__FILE__,__LINE__,flag);
+	  calls_to_driver_connector_rx++;
 	  //c->pending_write = flag;
 	  return c;
   }
+get_writer:
   c = (pn_connector_t *)proton_app_get_next_writer(&flag);
   if(c) {
   	  c->pending_write = 1;
-  	printf("%s %d %d\n",__FILE__,__LINE__,flag);
+  	calls_to_driver_connector_tx++;
+  	/*printf("%s %d %d %d %d\n",
+  				  __FILE__,__LINE__,
+  				  calls_to_driver_connector,
+  				  calls_to_driver_connector_rx,
+  				  calls_to_driver_connector_tx);*/
   	//c->pending_read = flag;
   	  return c;
   }
