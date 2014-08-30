@@ -115,9 +115,9 @@ extern void app_glue_init(void);
 extern int dpdk_linux_tcpip_init(int argc,char const **argv);
 pn_io_t *pn_io(void)
 {
-	const char *argv[] = { "ccc", "-c", "3", "-n", "1", "--", "-p", "1", "-a", "192.168.1.1" };
+	const char *argv[] = { "ccc", "-c", "3", "-n", "1", "--", "-p", "1" };
 	app_glue_init();
-	dpdk_linux_tcpip_init(10,argv);
+	dpdk_linux_tcpip_init(8,argv);
     return NULL;
 }
 
